@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ménage à deux — Service de ménage résidentiel | Mirabel, Blainville, Saint-Eustache</title>
+<meta name="description" content="Un ménage minutieux, offert par un couple de confiance. Résidentiel, condos et copropriétés — Mirabel, Blainville, Saint-Eustache. -20% sur votre premier ménage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#5B3E96;
+    --purple-deep:#4A3179;
+    --lav:#7A5CC0;
+    --pink:#F6A9B4;
+    --cream:#FBD3C7;
+    --teal:#4FD1C5;
+    --teal-deep:#2FA99D;
+    --coral:#FF6F61;
+    --ink:#2A2150;
+    --lilac-text:#EDE6FA;
+    --paper:#FFF8F3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.brand{font-family:'Fredoka',sans-serif;}
+  a{text-decoration:none;color:inherit;}
+  img,svg{display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+
+/* ––––– NAV ––––– */
+header{
+position:sticky; top:0; z-index:50;
+background:var(–purple);
+}
+nav.wrap{
+display:flex; align-items:center; justify-content:space-between;
+height:76px;
+}
+.brand{
+font-weight:700; font-size:20px; color:#fff; letter-spacing:0.01em;
+}
+.brand span{color:var(–cream);}
+.nav-links{display:flex; align-items:center; gap:34px;}
+.nav-links a{
+color:var(–lilac-text); font-weight:500; font-size:14.5px;
+transition:color .15s ease;
+}
+.nav-links a:hover{color:#fff;}
+.nav-cta{
+background:var(–teal); color:var(–ink); font-weight:700; font-size:14px;
+padding:11px 22px; border-radius:30px; white-space:nowrap;
+}
+.nav-toggle{display:none;}
+
+/* ––––– HERO ––––– */
+.hero{
+position:relative;
+background:var(–purple);
+overflow:hidden;
+padding-bottom:80px;
+}
+.blob-lav{
+position:absolute; top:-220px; left:80px;
+width:620px; height:560px;
+border-radius:45% 55% 60% 40% / 55% 45% 55% 45%;
+background:var(–lav);
+z-index:0;
+}
+.blob-pink{
+position:absolute; top:-120px; left:-120px;
+width:360px; height:360px; border-radius:50%;
+background:var(–pink); z-index:0;
+}
+.hero-grid{
+position:relative; z-index:2;
+display:grid; grid-template-columns:1.1fr 0.9fr;
+gap:40px; align-items:center;
+padding-top:64px;
+}
+.eyebrow{
+font-weight:700; font-size:12.5px; letter-spacing:0.14em;
+color:var(–cream); text-transform:uppercase;
+}
+.hero h1{
+margin-top:14px;
+font-size:clamp(46px,6vw,76px);
+line-height:0.95; font-weight:700;
+color:var(–cream);
+}
+.hero h1 .line2{color:#fff; display:block;}
+.hero p.sub{
+margin-top:22px; font-size:17px; line-height:1.6;
+color:var(–lilac-text); max-width:460px;
+}
+.hero-ctas{
+margin-top:32px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+}
+.btn-primary{
+background:var(–teal); color:var(–ink); font-weight:700; font-size:15px;
+padding:16px 32px; border-radius:40px; box-shadow:0 10px 24px rgba(0,0,0,0.18);
+transition:transform .15s ease;
+}
+.btn-primary:hover{transform:translateY(-2px);}
+.hero-phone{
+font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:22px; color:#fff;
+}
+.hero-phone-sub{font-size:12.5px; color:var(–lilac-text); margin-top:2px;}
+
+.hero-art-col{position:relative; z-index:2; display:flex; justify-content:center;}
+.badge{
+position:absolute; top:-14px; right:8px;
+width:150px; height:150px; border-radius:50%;
+background:var(–coral); border:4px dashed var(–cream);
+display:flex; flex-direction:column; align-items:center; justify-content:center;
+text-align:center; transform:rotate(-10deg);
+box-shadow:0 10px 24px rgba(0,0,0,0.25); z-index:3;
+}
+.badge .b-pct{font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:30px; color:#fff; line-height:1;}
+.badge .b-sub1{font-weight:700; font-size:10.5px; color:#fff; margin-top:2px;}
+.badge .b-sub2{font-weight:600; font-size:8.5px; color:var(–cream); margin-top:2px;}
+
+/* ––––– STAT STRIP ––––– */
+.stat-strip{
+background:var(–purple-deep);
+padding:26px 0;
+}
+.stat-strip .wrap{
+display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
+text-align:center;
+}
+.stat-strip .num{
+font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:30px; color:var(–cream);
+}
+.stat-strip .txt{color:var(–lilac-text); font-size:14.5px; max-width:520px;}
+
+/* ––––– SERVICES ––––– */
+.services-section{padding:88px 0 40px 0; background:var(–paper);}
+.section-eyebrow{
+text-align:center; font-weight:700; font-size:12.5px; letter-spacing:0.14em;
+color:var(–teal-deep); text-transform:uppercase;
+}
+.section-title{
+text-align:center; margin-top:10px; font-size:clamp(30px,4vw,42px);
+color:var(–purple); font-weight:700;
+}
+.section-sub{
+text-align:center; margin:14px auto 0; max-width:520px; color:#5a5470; font-size:15px; line-height:1.6;
+}
+.service-grid{
+margin-top:52px;
+display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+}
+.service-card{
+background:#fff; border-radius:20px; padding:30px 26px;
+border:1px solid #EDE3F5;
+box-shadow:0 6px 18px rgba(90,60,150,0.06);
+}
+.service-card .icon{
+width:52px; height:52px; border-radius:14px;
+background:var(–cream); display:flex; align-items:center; justify-content:center;
+margin-bottom:18px;
+}
+.service-card .icon svg{width:26px; height:26px;}
+.service-card h3{font-size:17px; color:var(–purple); font-weight:600; margin-bottom:8px;}
+.service-card p{font-size:13.5px; color:#6b6480; line-height:1.55;}
+
+/* ––––– HOW IT WORKS ––––– */
+.how-section{background:var(–purple); padding:90px 0; position:relative; overflow:hidden;}
+.how-section .blob-teal{
+position:absolute; bottom:-160px; right:-120px; width:420px; height:420px;
+border-radius:50%; background:var(–lav); opacity:0.5;
+}
+.how-section .section-eyebrow{color:var(–teal);}
+.how-section .section-title{color:#fff;}
+.how-section .section-sub{color:var(–lilac-text);}
+.steps{
+position:relative; z-index:2;
+margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+}
+.step{text-align:center;}
+.step .num{
+width:56px; height:56px; border-radius:50%; background:var(–teal); color:var(–ink);
+font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:22px;
+display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
+}
+.step h3{color:#fff; font-size:17px; font-weight:600; margin-bottom:8px;}
+.step p{color:var(–lilac-text); font-size:13.5px; line-height:1.55; max-width:260px; margin:0 auto;}
+
+/* ––––– OFFER BANNER ––––– */
+.offer-banner{
+background:var(–coral); padding:56px 0;
+}
+.offer-banner .wrap{
+display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+}
+.offer-banner h2{
+color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700; line-height:1.15;
+}
+.offer-banner p{color:#FFE4DE; font-size:14.5px; margin-top:8px;}
+.offer-banner .btn-primary{background:#fff; color:var(–coral);}
+
+/* ––––– CONTACT ––––– */
+.contact-section{padding:90px 0; background:var(–paper);}
+.contact-card{
+background:var(–purple); border-radius:28px; padding:56px;
+display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;
+position:relative; overflow:hidden;
+}
+.contact-card .blob-pink2{
+position:absolute; bottom:-100px; left:-100px; width:260px; height:260px; border-radius:50%;
+background:var(–pink); opacity:0.5;
+}
+.contact-left{position:relative; z-index:2;}
+.contact-left h2{color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700;}
+.contact-left p{color:var(–lilac-text); margin-top:12px; font-size:14.5px; line-height:1.6; max-width:400px;}
+.contact-right{position:relative; z-index:2; display:flex; flex-direction:column; gap:14px;}
+.contact-btn{
+display:flex; align-items:center; justify-content:center; gap:10px;
+padding:16px 22px; border-radius:16px; font-weight:700; font-size:14.5px;
+}
+.contact-btn.call{background:var(–teal); color:var(–ink);}
+.contact-btn.text{background:var(–purple); color:#fff;}
+.contact-area{color:#6b6480; font-size:12.5px; text-align:center; margin-top:2px;}
+
+/* ––––– BOOKING FORM ––––– */
+.booking-layout{
+margin-top:48px;
+display:grid; grid-template-columns:1.5fr 1fr; gap:28px; align-items:start;
+}
+.booking-form{
+background:#fff; border:1px solid #EDE3F5; border-radius:24px; padding:36px;
+box-shadow:0 10px 30px rgba(90,60,150,0.07);
+}
+.hp-field{position:absolute; left:-9999px;}
+.field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+.field{margin-bottom:18px;}
+.field label{
+display:block; font-size:13px; font-weight:600; color:var(–purple); margin-bottom:6px;
+}
+.field input, .field select, .field textarea{
+width:100%; padding:12px 14px; border-radius:10px; border:1.5px solid #E4DAF2;
+font-family:‘Poppins’,sans-serif; font-size:14px; color:var(–ink);
+background:#FBFAFE;
+}
+.field input:focus, .field select:focus, .field textarea:focus{
+outline:none; border-color:var(–teal);
+}
+.field textarea{resize:vertical;}
+.submit-btn{width:100%; border:none; cursor:pointer; margin-top:6px;}
+.form-note{font-size:12px; color:#8a84a0; text-align:center; margin-top:12px;}
+
+.success-msg{
+background:#fff; border:1px solid #EDE3F5; border-radius:24px; padding:56px 36px;
+text-align:center; box-shadow:0 10px 30px rgba(90,60,150,0.07);
+}
+.success-icon{
+width:56px; height:56px; border-radius:50%; background:var(–teal); color:#fff;
+display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700;
+margin:0 auto 18px;
+}
+.success-msg h3{color:var(–purple); font-size:22px; margin-bottom:10px;}
+.success-msg p{color:#6b6480; font-size:14.5px; margin-bottom:22px;}
+
+.booking-side{display:flex; flex-direction:column; gap:20px;}
+.side-card{
+background:#fff; border:1px solid #EDE3F5; border-radius:20px; padding:26px;
+display:flex; flex-direction:column; gap:12px;
+}
+.side-card h3{font-size:15px; color:var(–purple); margin-bottom:2px;}
+.offer-side{background:var(–cream); border:none; text-align:center;}
+.offer-side .b-pct{font-family:‘Fredoka’,sans-serif; font-weight:700; color:var(–coral);}
+.offer-side p{font-size:13px; color:var(–ink);}
+
+@media (max-width: 860px){
+.booking-layout{grid-template-columns:1fr;}
+.field-row{grid-template-columns:1fr;}
+}
+
+footer{
+background:var(–purple-deep); padding:34px 0; text-align:center;
+}
+footer p{color:var(–lilac-text); font-size:13px;}
+footer .fbrand{color:var(–cream); font-family:‘Fredoka’,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px;}
+
+/* ––––– RESPONSIVE ––––– */
+@media (max-width: 860px){
+.nav-links{position:fixed; top:76px; left:0; right:0; background:var(–purple);
+flex-direction:column; align-items:flex-start; padding:20px 28px; gap:18px;
+transform:translateY(-140%); transition:transform .25s ease; z-index:40;}
+.nav-links.open{transform:translateY(0);}
+.nav-toggle{display:block; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;}
+.hero-grid{grid-template-columns:1fr; padding-top:40px;}
+.hero-art-col{order:-1; margin-bottom:10px;}
+.service-grid{grid-template-columns:1fr 1fr;}
+.steps{grid-template-columns:1fr;}
+.contact-card{grid-template-columns:1fr; padding:36px 26px;}
+}
+@media (max-width: 560px){
+.service-grid{grid-template-columns:1fr;}
+.offer-banner .wrap{flex-direction:column; text-align:center;}
+.stat-strip .wrap{flex-direction:column; gap:6px;}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Ménage <span>à deux</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#comment">Comment ça marche</a>
+      <a href="#contact">Réserver</a>
+      <a href="tel:4388827263" class="nav-cta">438-882-7263</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="blob-lav"></div>
+  <div class="blob-pink"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Service de ménage résidentiel</div>
+      <h1>MÉNAGE<span class="line2">À DEUX</span></h1>
+      <p class="sub">Le ménage, une chose de moins sur votre liste. Un couple minutieux, fiable et discret &mdash; pour un chez-vous impeccable, chaque fois.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">RÉSERVEZ MAINTENANT</a>
+        <div>
+          <div class="hero-phone">438-882-7263</div>
+          <div class="hero-phone-sub">Soumission gratuite en quelques minutes</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art-col">
+      <div class="badge">
+        <div class="b-pct">-20%</div>
+        <div class="b-sub1">1er MÉNAGE</div>
+        <div class="b-sub2">nouveaux clients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="num">12 896 heures.</div>
+    <div class="txt">C'est le temps moyen qu'une personne passe à faire le ménage dans sa vie &mdash; près d'un an et demi au total. On peut s'en occuper pour vous.</div>
+  </div>
+</div>
+
+<section class="services-section" id="services">
+  <div class="wrap">
+    <div class="section-eyebrow">Nos services</div>
+    <h2 class="section-title">Un ménage complet, de fond en comble</h2>
+    <p class="section-sub">Maisons, condos et appartements &mdash; à Mirabel, Blainville et Saint-Eustache.</p>
+
+```
+<div class="service-grid">
+  <div class="service-card">
+    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 10h16v2a6 6 0 01-6 6h-4a6 6 0 01-6-6v-2z" stroke="#5B3E96" stroke-width="2" stroke-linejoin="round"/><path d="M4 10a2 2 0 012-2M20 10a2 2 0 00-2-2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M9 6V5M12 6V4M15 6v1" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
+    <h3>Cuisine &amp; électroménagers</h3>
+    <p>Comptoirs, évier, cuisinière et l'intérieur du four et du micro-ondes.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18v2a4 4 0 01-4 4H7a4 4 0 01-4-4v-2z" stroke="#5B3E96" stroke-width="2" stroke-linejoin="round"/><path d="M5 12V7a2 2 0 012-2h1" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="8" r="1.3" fill="#5B3E96"/><path d="M3 18v1.5M21 18v1.5" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
+    <h3>Salle de bain en profondeur</h3>
+    <p>Douche, bain, toilette et robinetterie désinfectés du plancher au plafond.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 19v-6a2 2 0 012-2h14a2 2 0 012 2v6" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19v1.6M21 19v1.6" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M5 11V9a2 2 0 012-2h2a2 2 0 012 2v2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11V9a2 2 0 012-2h2a2 2 0 012 2v2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h3>Chambres &amp; salon</h3>
+    <p>Époussetage, rangement léger et lits faits sur demande.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke="#5B3E96" stroke-width="2"/><path d="M12 4v16M4 12h16" stroke="#5B3E96" stroke-width="2"/></svg></div>
+    <h3>Époussetage &amp; vitres</h3>
+    <p>Surfaces, cadrages et fenêtres intérieures, sans traces.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="15" width="9" height="5.5" rx="2" fill="#5B3E96"/><circle cx="8.2" cy="21.3" r="1.2" fill="#5B3E96"/><circle cx="12.8" cy="21.3" r="1.2" fill="#5B3E96"/><path d="M10.5 15V6.5a1.5 1.5 0 011.5-1.5" stroke="#5B3E96" stroke-width="2.2" stroke-linecap="round"/><path d="M12 5l6-1.5" stroke="#5B3E96" stroke-width="2.2" stroke-linecap="round"/><circle cx="18.4" cy="3" r="1.4" fill="#5B3E96"/></svg></div>
+    <h3>Planchers lavés &amp; aspirés</h3>
+    <p>Bois, céramique et tapis &mdash; adaptés à chaque surface.</p>
+  </div>
+  <div class="service-card">
+    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="4.5" r="1.4" stroke="#5B3E96" stroke-width="2"/><path d="M12 5.8v1.7" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M4 17l7.3-5.2a1.1 1.1 0 011.4 0L20 17" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17h18" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
+    <h3>Organisation des garde-robes</h3>
+    <p>On remet de l'ordre pour un espace plus fonctionnel.</p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<section class="how-section" id="comment">
+  <div class="blob-teal"></div>
+  <div class="wrap">
+    <div class="section-eyebrow">Simple &amp; rapide</div>
+    <h2 class="section-title">Comment ça marche</h2>
+    <p class="section-sub">Trois étapes, aucun tracas.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Contactez-nous</h3>
+        <p>Appelez ou textez pour nous parler de votre logement et de vos besoins.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Recevez une soumission</h3>
+        <p>Un prix clair et fixe, sans surprise, en quelques minutes.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Profitez d'un chez-vous impeccable</h3>
+        <p>On s'occupe du reste &mdash; ponctuels, minutieux et discrets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offer-banner">
+  <div class="wrap">
+    <div>
+      <h2>-20% sur votre premier ménage</h2>
+      <p>Offert aux nouveaux clients &mdash; Mirabel, Blainville &amp; Saint-Eustache.</p>
+    </div>
+    <a href="#contact" class="btn-primary">J'EN PROFITE</a>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap">
+    <div class="section-eyebrow">Réservation</div>
+    <h2 class="section-title">Réservez votre ménage</h2>
+    <p class="section-sub">Remplissez le formulaire et on vous contacte pour confirmer &mdash; ou appelez-nous directement.</p>
+
+```
+<div class="booking-layout">
+  <form
+    name="reservation"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    id="bookingForm"
+    class="booking-form"
+  >
+    <input type="hidden" name="form-name" value="reservation" />
+    <p class="hp-field"><label>Ne pas remplir: <input name="bot-field" /></label></p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="fname">Nom complet *</label>
+        <input type="text" id="fname" name="Nom complet" required placeholder="Prénom et nom">
+      </div>
+      <div class="field">
+        <label for="fphone">Téléphone *</label>
+        <input type="tel" id="fphone" name="Téléphone" required placeholder="438-000-0000">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="femail">Courriel</label>
+        <input type="email" id="femail" name="Courriel" placeholder="vous@courriel.com">
+      </div>
+      <div class="field">
+        <label for="fsecteur">Secteur *</label>
+        <select id="fsecteur" name="Secteur" required>
+          <option value="" disabled selected>Choisir&hellip;</option>
+          <option>Mirabel</option>
+          <option>Blainville</option>
+          <option>Saint-Eustache</option>
+          <option>Autre</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="ftype">Type de logement *</label>
+        <select id="ftype" name="Type de logement" required>
+          <option value="" disabled selected>Choisir&hellip;</option>
+          <option>Appartement / Condo</option>
+          <option>Maison</option>
+          <option>Duplex</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="frooms">Nombre de chambres</label>
+        <select id="frooms" name="Nombre de chambres">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="fdate">Date souhaitée</label>
+        <input type="date" id="fdate" name="Date souhaitée">
+      </div>
+      <div class="field">
+        <label for="ftime">Moment préféré</label>
+        <select id="ftime" name="Moment préféré">
+          <option>Matin</option>
+          <option>Après-midi</option>
+          <option>Flexible</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="ffreq">Fréquence</label>
+      <select id="ffreq" name="Fréquence">
+        <option>Ménage une fois</option>
+        <option>Aux 2 semaines</option>
+        <option>Hebdomadaire</option>
+        <option>Mensuel</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="fmsg">Commentaires</label>
+      <textarea id="fmsg" name="Commentaires" rows="3" placeholder="Détails supplémentaires, animaux, accès, etc."></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary submit-btn">ENVOYER MA DEMANDE</button>
+    <p class="form-note">Réponse habituelle en moins de 24h. Premier ménage &mdash; -20% de rabais automatiquement appliqué.</p>
+  </form>
+
+  <div id="successMsg" class="success-msg" hidden>
+    <div class="success-icon">✓</div>
+    <h3>Demande envoyée!</h3>
+    <p>Merci! On vous contacte sous peu pour confirmer votre réservation.</p>
+    <a href="tel:4388827263" class="btn-primary">Ou appelez-nous : 438-882-7263</a>
+  </div>
+
+  <div class="booking-side">
+    <div class="side-card">
+      <h3>Préférez appeler ou texter?</h3>
+      <a href="tel:4388827263" class="contact-btn call">📞 438-882-7263</a>
+      <a href="sms:4388827263" class="contact-btn text">💬 Textez-nous</a>
+      <div class="contact-area">Mirabel · Blainville · Saint-Eustache</div>
+    </div>
+    <div class="side-card offer-side">
+      <div class="b-pct" style="font-size:26px;">-20%</div>
+      <p>sur votre premier ménage &mdash; appliqué automatiquement à votre soumission.</p>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">Ménage à deux</div>
+  <p>&copy; 2026 Ménage à deux. Service de ménage résidentiel &mdash; Mirabel, QC.</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  function encodeForm(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const bookingForm = document.getElementById('bookingForm');
+  const successMsg = document.getElementById('successMsg');
+
+  bookingForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(bookingForm);
+    const payload = {};
+    formData.forEach((value, key) => { payload[key] = value; });
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodeForm(payload),
+    })
+      .then(() => {
+        bookingForm.hidden = true;
+        successMsg.hidden = false;
+        successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(() => {
+        alert("Une erreur est survenue. Veuillez réessayer ou nous appeler directement au 438-882-7263.");
+      });
+  });
+</script>
+
+</body>
+</html>

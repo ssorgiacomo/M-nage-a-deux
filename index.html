@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ménage à deux — Service de ménage résidentiel | Mirabel, Blainville, Saint-Eustache</title>
-<meta name="description" content="Un ménage minutieux, offert par un couple de confiance. Résidentiel, condos et copropriétés — Mirabel, Blainville, Saint-Eustache. -20% sur votre premier ménage.">
+<title>Ménage à deux — Service de ménage résidentiel | Laurentides (Mirabel, Blainville, Sainte-Thérèse)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235B3E96'/%3E%3Cpath d='M20 24c0-3 3-5 6-5h12c3 0 6 2 6 5v18a3 3 0 01-3 3H23a3 3 0 01-3-3V24z' fill='%234FD1C5'/%3E%3Cpath d='M26 19v-2a2 2 0 012-2h8a2 2 0 012 2v2' stroke='%23FBD3C7' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<meta name="description" content="Un ménage minutieux, offert par un couple de confiance. Résidentiel, condos et copropriétés — partout dans les Laurentides : Mirabel, Saint-Janvier, Blainville, Sainte-Thérèse. -20% sur votre premier ménage.">
 <link rel="canonical" href="https://menageadeux.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ménage à deux — Service de ménage résidentiel">
-<meta property="og:description" content="Un ménage minutieux, offert par un couple de confiance. Mirabel, Blainville, Saint-Eustache. -20% sur votre premier ménage.">
+<meta property="og:description" content="Un ménage minutieux, offert par un couple de confiance. Partout dans les Laurentides. -20% sur votre premier ménage.">
+<meta property="og:image" content="https://menageadeux.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://menageadeux.com/">
 <meta property="og:locale" content="fr_CA">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://menageadeux.com/og-image.png">
 <meta name="robots" content="index, follow">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HouseCleaningService",
   "name": "Ménage à deux",
-  "description": "Service de ménage résidentiel minutieux pour maisons, condos et appartements.",
+  "description": "Service de ménage résidentiel minutieux pour maisons, condos et appartements, partout dans les Laurentides.",
   "telephone": "+1-438-882-7263",
   "url": "https://menageadeux.com/",
   "priceRange": "$$",
   "areaServed": [
     {"@type": "City", "name": "Mirabel"},
+    {"@type": "City", "name": "Saint-Janvier"},
     {"@type": "City", "name": "Blainville"},
-    {"@type": "City", "name": "Saint-Eustache"}
+    {"@type": "City", "name": "Sainte-Thérèse"},
+    {"@type": "City", "name": "Saint-Eustache"},
+    {"@type": "AdministrativeArea", "name": "Laurentides"}
   ],
   "address": {
     "@type": "PostalAddress",
@@ -40,6 +47,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
+  [hidden]{display:none !important;}
   html{scroll-behavior:smooth;}
   body{
     font-family:'Poppins',sans-serif;
@@ -52,380 +60,677 @@
   img,svg{display:block;}
   .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
 
-header{
-position:sticky; top:0; z-index:50;
-background:#5B3E96;
-}
-nav.wrap{
-display:flex; align-items:center; justify-content:space-between;
-height:76px;
-}
-.brand{
-font-weight:700; font-size:20px; color:#fff; letter-spacing:0.01em;
-}
-.brand span{color:#FBD3C7;}
-.nav-links{display:flex; align-items:center; gap:34px;}
-.nav-links a{
-color:#EDE6FA; font-weight:500; font-size:14.5px;
-transition:color .15s ease;
-}
-.nav-links a:hover{color:#fff;}
-.nav-cta{
-background:#4FD1C5; color:#2A2150; font-weight:700; font-size:14px;
-padding:11px 22px; border-radius:30px; white-space:nowrap;
-}
-.nav-toggle{display:none;}
-#navPhoneMobile{display:none;}
+  header{
+    position:sticky; top:0; z-index:50;
+    background:#5B3E96;
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .brand{
+    font-weight:700; font-size:20px; color:#fff; letter-spacing:0.01em;
+  }
+  .brand span{color:#FBD3C7;}
+  .nav-links{display:flex; align-items:center; gap:34px;}
+  .nav-links a{
+    color:#EDE6FA; font-weight:500; font-size:14.5px;
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{
+    background:#4FD1C5; color:#2A2150; font-weight:700; font-size:14px;
+    padding:11px 22px; border-radius:30px; white-space:nowrap;
+  }
+  .nav-toggle{display:none;}
+  #navPhoneMobile{display:none;}
 
-.contact-dropdown{position:relative;}
-.contact-dd-btn{
-background:#4FD1C5; color:#2A2150; font-weight:700; font-size:14px;
-padding:11px 22px; border-radius:30px; white-space:nowrap;
-display:flex; align-items:center; gap:6px; border:none; cursor:pointer;
-font-family:‘Poppins’,sans-serif;
-}
-.contact-dd-btn .caret{transition:transform .15s ease; font-size:10px;}
-.contact-dd-btn.open .caret{transform:rotate(180deg);}
-.contact-dd-panel{
-position:absolute; top:calc(100% + 10px); right:0;
-background:#fff; border-radius:16px; padding:10px;
-box-shadow:0 14px 34px rgba(42,33,80,0.22);
-display:flex; flex-direction:column; gap:4px;
-min-width:220px; z-index:60;
-opacity:0; pointer-events:none; transform:translateY(-8px);
-transition:opacity .15s ease, transform .15s ease;
-}
-.contact-dd-panel.open{opacity:1; pointer-events:auto; transform:translateY(0);}
-.contact-dd-panel a{
-display:flex; align-items:center; gap:12px;
-padding:12px 14px; border-radius:10px; color:#2A2150;
-font-weight:600; font-size:14px;
-}
-.contact-dd-panel a:hover{background:#F4F0FA;}
-.contact-dd-panel a .emoji{font-size:16px;}
-.contact-dd-panel .dd-sub{
-font-size:11.5px; font-weight:400; color:#8a84a0; padding:6px 14px 2px;
-}
-.dd-copy-btn{
-display:flex; align-items:center; gap:12px; width:100%;
-padding:12px 14px; border-radius:10px; color:#2A2150;
-font-weight:600; font-size:14px; background:none; border:none;
-cursor:pointer; text-align:left; font-family:‘Poppins’,sans-serif;
-}
-.dd-copy-btn:hover{background:#F4F0FA;}
-.dd-copy-btn .emoji{font-size:16px;}
+  .contact-dropdown{position:relative;}
+  .contact-dd-btn{
+    background:#4FD1C5; color:#2A2150; font-weight:700; font-size:14px;
+    padding:11px 22px; border-radius:30px; white-space:nowrap;
+    display:flex; align-items:center; gap:6px; border:none; cursor:pointer;
+    font-family:'Poppins',sans-serif;
+  }
+  .contact-dd-btn .caret{transition:transform .15s ease; font-size:10px;}
+  .contact-dd-btn.open .caret{transform:rotate(180deg);}
+  .contact-dd-panel{
+    position:absolute; top:calc(100% + 10px); right:0;
+    background:#fff; border-radius:16px; padding:10px;
+    box-shadow:0 14px 34px rgba(42,33,80,0.22);
+    display:flex; flex-direction:column; gap:4px;
+    min-width:220px; z-index:60;
+    opacity:0; pointer-events:none; transform:translateY(-8px);
+    transition:opacity .15s ease, transform .15s ease;
+  }
+  .contact-dd-panel.open{opacity:1; pointer-events:auto; transform:translateY(0);}
+  .contact-dd-panel a{
+    display:flex; align-items:center; gap:12px;
+    padding:12px 14px; border-radius:10px; color:#2A2150;
+    font-weight:600; font-size:14px;
+  }
+  .contact-dd-panel a:hover{background:#F4F0FA;}
+  .contact-dd-panel a .emoji{font-size:16px;}
+  .contact-dd-panel .dd-sub{
+    font-size:11.5px; font-weight:400; color:#8a84a0; padding:6px 14px 2px;
+  }
+  .dd-copy-btn{
+    display:flex; align-items:center; gap:12px; width:100%;
+    padding:12px 14px; border-radius:10px; color:#2A2150;
+    font-weight:600; font-size:14px; background:none; border:none;
+    cursor:pointer; text-align:left; font-family:'Poppins',sans-serif;
+  }
+  .dd-copy-btn:hover{background:#F4F0FA;}
+  .dd-copy-btn .emoji{font-size:16px;}
 
-.hero{
-position:relative;
-background:#5B3E96;
-overflow:hidden;
-padding-bottom:80px;
-}
-.blob-lav{
-position:absolute; top:-220px; left:80px;
-width:620px; height:560px;
-border-radius:45% 55% 60% 40% / 55% 45% 55% 45%;
-background:#7A5CC0;
-z-index:0;
-}
-.blob-pink{
-position:absolute; top:-120px; left:-120px;
-width:360px; height:360px; border-radius:50%;
-background:#F6A9B4; z-index:0;
-}
-.hero-grid{
-position:relative; z-index:2;
-display:grid; grid-template-columns:1.1fr 0.9fr;
-gap:40px; align-items:center;
-padding-top:64px;
-}
-.eyebrow{
-font-weight:700; font-size:12.5px; letter-spacing:0.14em;
-color:#FBD3C7; text-transform:uppercase;
-}
-.hero h1{
-margin-top:14px;
-font-size:clamp(46px,6vw,76px);
-line-height:0.95; font-weight:700;
-color:#FBD3C7;
-}
-.hero h1 .line2{color:#fff; display:block;}
-.hero p.sub{
-margin-top:22px; font-size:17px; line-height:1.6;
-color:#EDE6FA; max-width:460px;
-}
-.hero-ctas{
-margin-top:32px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-}
-.btn-primary{
-background:#4FD1C5; color:#2A2150; font-weight:700; font-size:15px;
-padding:16px 32px; border-radius:40px; box-shadow:0 10px 24px rgba(0,0,0,0.18);
-transition:transform .15s ease;
-}
-.btn-primary:hover{transform:translateY(-2px);}
-.success-call-btn{
-display:inline-block; max-width:100%; text-align:center;
-border-radius:16px; line-height:1.4; white-space:normal;
-}
-@media (max-width: 480px){
-.success-call-btn{font-size:13px; padding:14px 20px;}
-}
-.hero-phone{
-font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:22px; color:#fff;
-}
-.hero-phone-sub{font-size:12.5px; color:#EDE6FA; margin-top:2px;}
+  .hero{
+    position:relative;
+    background:#5B3E96;
+    overflow:hidden;
+    padding-bottom:80px;
+  }
+  .blob-lav{
+    position:absolute; top:-220px; left:80px;
+    width:620px; height:560px;
+    border-radius:45% 55% 60% 40% / 55% 45% 55% 45%;
+    background:#7A5CC0;
+    z-index:0;
+  }
+  .blob-pink{
+    position:absolute; top:-120px; left:-120px;
+    width:360px; height:360px; border-radius:50%;
+    background:#F6A9B4; z-index:0;
+  }
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:1.1fr 0.9fr;
+    gap:40px; align-items:center;
+    padding-top:64px;
+  }
+  .eyebrow{
+    font-weight:700; font-size:12.5px; letter-spacing:0.14em;
+    color:#FBD3C7; text-transform:uppercase;
+  }
+  .hero h1{
+    margin-top:14px;
+    font-size:clamp(46px,6vw,76px);
+    line-height:0.95; font-weight:700;
+    color:#FBD3C7;
+  }
+  .hero h1 .line2{color:#fff; display:block;}
+  .hero p.sub{
+    margin-top:22px; font-size:17px; line-height:1.6;
+    color:#EDE6FA; max-width:460px;
+  }
+  .hero-ctas{
+    margin-top:32px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  }
+  .btn-primary{
+    background:#4FD1C5; color:#2A2150; font-weight:700; font-size:15px;
+    padding:16px 32px; border-radius:40px; box-shadow:0 10px 24px rgba(0,0,0,0.18);
+    transition:transform .15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .success-call-btn{
+    display:inline-block; max-width:100%; text-align:center;
+    border-radius:16px; line-height:1.4; white-space:normal;
+  }
+  @media (max-width: 480px){
+    .success-call-btn{font-size:13px; padding:14px 20px;}
+  }
+  .hero-phone{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:22px; color:#fff;
+  }
+  .hero-phone-sub{font-size:12.5px; color:#EDE6FA; margin-top:2px;}
 
-.hero-art-col{position:relative; z-index:2; display:flex; justify-content:center;}
-.badge{
-position:absolute; top:-14px; right:8px;
-width:150px; height:150px; border-radius:50%;
-background:#FF6F61; border:4px dashed #FBD3C7;
-display:flex; flex-direction:column; align-items:center; justify-content:center;
-text-align:center; transform:rotate(-10deg);
-box-shadow:0 10px 24px rgba(0,0,0,0.25); z-index:3;
-}
-.badge .b-pct{font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:30px; color:#fff; line-height:1;}
-.badge .b-sub1{font-weight:700; font-size:10.5px; color:#fff; margin-top:2px;}
-.badge .b-sub2{font-weight:600; font-size:8.5px; color:#FBD3C7; margin-top:2px;}
+  .hero-art-col{position:relative; z-index:2; display:flex; justify-content:center;}
+  .badge{
+    position:absolute; top:-14px; right:8px;
+    width:150px; height:150px; border-radius:50%;
+    background:#FF6F61; border:4px dashed #FBD3C7;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; transform:rotate(-10deg);
+    box-shadow:0 10px 24px rgba(0,0,0,0.25); z-index:3;
+  }
+  .badge .b-pct{font-family:'Fredoka',sans-serif; font-weight:700; font-size:30px; color:#fff; line-height:1;}
+  .badge .b-sub1{font-weight:700; font-size:10.5px; color:#fff; margin-top:2px;}
+  .badge .b-sub2{font-weight:600; font-size:8.5px; color:#FBD3C7; margin-top:2px;}
 
-.stat-strip{
-background:#4A3179;
-padding:26px 0;
-}
-.stat-strip .wrap{
-display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
-text-align:center;
-}
-.stat-strip .num{
-font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:30px; color:#FBD3C7;
-}
-.stat-strip .txt{color:#EDE6FA; font-size:14.5px; max-width:520px;}
+  .stat-strip{
+    background:#4A3179;
+    padding:26px 0;
+  }
+  .stat-strip .wrap{
+    display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
+    text-align:center;
+  }
+  .stat-strip .num{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:30px; color:#FBD3C7;
+  }
+  .stat-strip .txt{color:#EDE6FA; font-size:14.5px; max-width:520px;}
 
-.services-section{padding:88px 0 40px 0; background:#FFF8F3;}
-.section-eyebrow{
-text-align:center; font-weight:700; font-size:12.5px; letter-spacing:0.14em;
-color:#2FA99D; text-transform:uppercase;
-}
-.section-title{
-text-align:center; margin-top:10px; font-size:clamp(30px,4vw,42px);
-color:#5B3E96; font-weight:700;
-}
-.section-sub{
-text-align:center; margin:14px auto 0; max-width:520px; color:#5a5470; font-size:15px; line-height:1.6;
-}
-.service-grid{
-margin-top:52px;
-display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
-}
-.service-card{
-background:#fff; border-radius:20px; padding:30px 26px;
-border:1px solid #EDE3F5;
-box-shadow:0 6px 18px rgba(90,60,150,0.06);
-}
-.service-card .icon{
-width:52px; height:52px; border-radius:14px;
-background:#FBD3C7; display:flex; align-items:center; justify-content:center;
-margin-bottom:18px;
-}
-.service-card .icon svg{width:26px; height:26px;}
-.service-card h3{font-size:17px; color:#5B3E96; font-weight:600; margin-bottom:8px;}
-.service-card p{font-size:13.5px; color:#6b6480; line-height:1.55;}
+  .services-section{padding:88px 0 40px 0; background:#FFF8F3;}
+  .section-eyebrow{
+    text-align:center; font-weight:700; font-size:12.5px; letter-spacing:0.14em;
+    color:#2FA99D; text-transform:uppercase;
+  }
+  .section-title{
+    text-align:center; margin-top:10px; font-size:clamp(30px,4vw,42px);
+    color:#5B3E96; font-weight:700;
+  }
+  .section-sub{
+    text-align:center; margin:14px auto 0; max-width:520px; color:#5a5470; font-size:15px; line-height:1.6;
+  }
+  .service-grid{
+    margin-top:52px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  }
+  .service-card{
+    background:#fff; border-radius:20px; padding:30px 26px;
+    border:1px solid #EDE3F5;
+    box-shadow:0 6px 18px rgba(90,60,150,0.06);
+  }
+  .service-card .icon{
+    width:52px; height:52px; border-radius:14px;
+    background:#FBD3C7; display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+  }
+  .service-card .icon svg{width:26px; height:26px;}
+  .service-card h3{font-size:17px; color:#5B3E96; font-weight:600; margin-bottom:8px;}
+  .service-card p{font-size:13.5px; color:#6b6480; line-height:1.55;}
 
-.how-section{background:#5B3E96; padding:90px 0; position:relative; overflow:hidden;}
-.how-section .blob-teal{
-position:absolute; bottom:-160px; right:-120px; width:420px; height:420px;
-border-radius:50%; background:#7A5CC0; opacity:0.5;
-}
-.how-section .section-eyebrow{color:#4FD1C5;}
-.how-section .section-title{color:#fff;}
-.how-section .section-sub{color:#EDE6FA;}
-.steps{
-position:relative; z-index:2;
-margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
-}
-.step{text-align:center;}
-.step .num{
-width:56px; height:56px; border-radius:50%; background:#4FD1C5; color:#2A2150;
-font-family:‘Fredoka’,sans-serif; font-weight:700; font-size:22px;
-display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
-}
-.step h3{color:#fff; font-size:17px; font-weight:600; margin-bottom:8px;}
-.step p{color:#EDE6FA; font-size:13.5px; line-height:1.55; max-width:260px; margin:0 auto;}
+  .how-section{background:#5B3E96; padding:90px 0; position:relative; overflow:hidden;}
+  .how-section .blob-teal{
+    position:absolute; bottom:-160px; right:-120px; width:420px; height:420px;
+    border-radius:50%; background:#7A5CC0; opacity:0.5;
+  }
+  .how-section .section-eyebrow{color:#4FD1C5;}
+  .how-section .section-title{color:#fff;}
+  .how-section .section-sub{color:#EDE6FA;}
+  .steps{
+    position:relative; z-index:2;
+    margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+  }
+  .step{text-align:center;}
+  .step .num{
+    width:56px; height:56px; border-radius:50%; background:#4FD1C5; color:#2A2150;
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:22px;
+    display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
+  }
+  .step h3{color:#fff; font-size:17px; font-weight:600; margin-bottom:8px;}
+  .step p{color:#EDE6FA; font-size:13.5px; line-height:1.55; max-width:260px; margin:0 auto;}
 
-.offer-banner{
-background:#FF6F61; padding:56px 0;
-}
-.offer-banner .wrap{
-display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
-}
-.offer-banner h2{
-color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700; line-height:1.15;
-}
-.offer-banner p{color:#FFE4DE; font-size:14.5px; margin-top:8px;}
-.offer-banner .btn-primary{background:#fff; color:#FF6F61;}
+  .offer-banner{
+    background:#FF6F61; padding:56px 0;
+  }
+  .offer-banner .wrap{
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .offer-banner h2{
+    color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700; line-height:1.15;
+  }
+  .offer-banner p{color:#FFE4DE; font-size:14.5px; margin-top:8px;}
+  .ob-strike{text-decoration:line-through; opacity:0.75;}
+  .ob-final{font-weight:700; color:#fff;}
+  .offer-banner .btn-primary{background:#fff; color:#FF6F61;}
 
-.contact-section{padding:90px 0; background:#FFF8F3;}
-.contact-card{
-background:#5B3E96; border-radius:28px; padding:56px;
-display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;
-position:relative; overflow:hidden;
-}
-.contact-card .blob-pink2{
-position:absolute; bottom:-100px; left:-100px; width:260px; height:260px; border-radius:50%;
-background:#F6A9B4; opacity:0.5;
-}
-.contact-left{position:relative; z-index:2;}
-.contact-left h2{color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700;}
-.contact-left p{color:#EDE6FA; margin-top:12px; font-size:14.5px; line-height:1.6; max-width:400px;}
-.contact-right{position:relative; z-index:2; display:flex; flex-direction:column; gap:14px;}
-.contact-btn{
-display:flex; align-items:center; justify-content:center; gap:10px;
-padding:16px 22px; border-radius:16px; font-weight:700; font-size:14.5px;
-}
-.contact-btn.call{background:#4FD1C5; color:#2A2150;}
-.contact-btn.text{background:#5B3E96; color:#fff;}
-.contact-area{color:#6b6480; font-size:12.5px; text-align:center; margin-top:2px;}
+  .contact-section{padding:90px 0; background:#FFF8F3;}
+  .contact-card{
+    background:#5B3E96; border-radius:28px; padding:56px;
+    display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;
+    position:relative; overflow:hidden;
+  }
+  .contact-card .blob-pink2{
+    position:absolute; bottom:-100px; left:-100px; width:260px; height:260px; border-radius:50%;
+    background:#F6A9B4; opacity:0.5;
+  }
+  .contact-left{position:relative; z-index:2;}
+  .contact-left h2{color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700;}
+  .contact-left p{color:#EDE6FA; margin-top:12px; font-size:14.5px; line-height:1.6; max-width:400px;}
+  .contact-right{position:relative; z-index:2; display:flex; flex-direction:column; gap:14px;}
+  .contact-btn{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    padding:16px 22px; border-radius:16px; font-weight:700; font-size:14.5px;
+  }
+  .contact-btn.call{background:#4FD1C5; color:#2A2150;}
+  .contact-btn.text{background:#5B3E96; color:#fff;}
+  .contact-area{color:#6b6480; font-size:12.5px; text-align:center; margin-top:2px;}
 
-.booking-layout{
-margin-top:48px;
-display:grid; grid-template-columns:1.5fr 1fr; gap:28px; align-items:start;
-}
-.booking-form{
-background:#fff; border:1px solid #EDE3F5; border-radius:24px; padding:36px;
-box-shadow:0 10px 30px rgba(90,60,150,0.07);
-}
-.hp-field{position:absolute; left:-9999px;}
-.field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
-.field{margin-bottom:18px;}
-.field label{
-display:block; font-size:13px; font-weight:600; color:#5B3E96; margin-bottom:6px;
-}
-.field input, .field select, .field textarea{
-width:100%; padding:12px 14px; border-radius:10px; border:1.5px solid #E4DAF2;
-font-family:‘Poppins’,sans-serif; font-size:14px; color:#2A2150;
-background:#FBFAFE;
-}
-.field input:focus, .field select:focus, .field textarea:focus{
-outline:none; border-color:#4FD1C5;
-}
-.field textarea{resize:vertical;}
-.submit-btn{width:100%; border:none; cursor:pointer; margin-top:6px;}
-.form-note{font-size:12px; color:#8a84a0; text-align:center; margin-top:12px;}
+  .facture{
+    margin-top:40px; background:#fff; border:1px solid #EDE3F5; border-radius:20px;
+    padding:34px 36px; max-width:560px; box-shadow:0 10px 30px rgba(90,60,150,0.08);
+  }
+  .facture-head{
+    display:flex; flex-direction:column; gap:3px; margin-bottom:20px;
+    padding-bottom:18px; border-bottom:1px solid #F1ECFA;
+  }
+  .facture-title{font-family:'Fredoka',sans-serif; font-weight:700; font-size:17px; color:#5B3E96; display:flex; align-items:center;}
+  .facture-sub{font-size:11.5px; color:#9089a0;}
+  .facture-row{
+    display:flex; align-items:baseline; gap:6px; padding:7px 0; font-size:13px; color:#4a4460;
+  }
+  .facture-label{white-space:nowrap; flex-shrink:0;}
+  .facture-label em{font-style:normal; color:#9089a0; font-size:11.5px;}
+  .facture-dots{
+    flex:1; border-bottom:1.5px dotted #D9D0EC; margin-bottom:4px; min-width:10px;
+  }
+  .facture-val{white-space:nowrap; font-weight:600; color:#2A2150; flex-shrink:0;}
+  .facture-extras{display:flex; flex-direction:column;}
+  .facture-extra-row{
+    display:flex; align-items:baseline; gap:6px; padding:5px 0 5px 14px; font-size:12px; color:#6b6480;
+  }
+  .facture-extra-row .facture-dots{border-bottom-style:dotted; border-color:#EAE3F5;}
+  .facture-extra-row .facture-val{font-weight:500; color:#5B3E96;}
+  .facture-divider{border-top:1px solid #F1ECFA; margin:10px 0;}
+  .facture-row-total{font-size:15px; padding:9px 0;}
+  .facture-row-total .facture-label{font-weight:700; color:#5B3E96;}
+  .facture-row-total .facture-val{font-family:'Fredoka',sans-serif; font-weight:700; font-size:19px;}
+  .facture-val-teal{color:#2FA99D;}
+  .facture-footnote{margin-top:18px; font-size:10.5px; color:#9089a0; font-style:italic; text-align:center;}
 
-.success-msg{
-background:#fff; border:1px solid #EDE3F5; border-radius:24px; padding:56px 36px;
-text-align:center; box-shadow:0 10px 30px rgba(90,60,150,0.07);
-}
-.success-icon{
-width:56px; height:56px; border-radius:50%; background:#4FD1C5; color:#fff;
-display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700;
-margin:0 auto 18px;
-}
-.success-msg h3{color:#5B3E96; font-size:22px; margin-bottom:10px;}
-.success-msg p{color:#6b6480; font-size:14.5px; margin-bottom:22px;}
+  .booking-layout{
+    margin-top:48px;
+    display:grid; grid-template-columns:1.5fr 1fr; gap:28px; align-items:start;
+  }
+  .booking-form{
+    background:#fff; border:1px solid #EDE3F5; border-radius:24px; padding:36px;
+    box-shadow:0 10px 30px rgba(90,60,150,0.07);
+  }
+  .hp-field{position:absolute; left:-9999px;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block; font-size:13px; font-weight:600; color:#5B3E96; margin-bottom:6px;
+  }
+  .field input, .field select, .field textarea{
+    width:100%; padding:12px 14px; border-radius:10px; border:1.5px solid #E4DAF2;
+    font-family:'Poppins',sans-serif; font-size:14px; color:#2A2150;
+    background:#FBFAFE;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:#4FD1C5;
+  }
+  .field-flash{animation:fieldFlash 1.1s ease;}
+  @keyframes fieldFlash{
+    0%{box-shadow:0 0 0 4px rgba(79,209,197,0.5); border-color:#4FD1C5;}
+    100%{box-shadow:0 0 0 0 rgba(79,209,197,0); }
+  }
+  .field textarea{resize:vertical;}
+  .submit-btn{width:100%; border:none; cursor:pointer; margin-top:6px;}
+  .form-note{font-size:12px; color:#8a84a0; text-align:center; margin-top:12px;}
 
-.booking-side{display:flex; flex-direction:column; gap:20px;}
-.side-card{
-background:#fff; border:1px solid #EDE3F5; border-radius:20px; padding:26px;
-display:flex; flex-direction:column; gap:12px;
-}
-.side-card h3{font-size:15px; color:#5B3E96; margin-bottom:2px;}
-.offer-side{background:#FBD3C7; border:none; text-align:center;}
-.offer-side .b-pct{font-family:‘Fredoka’,sans-serif; font-weight:700; color:#FF6F61;}
-.offer-side p{font-size:13px; color:#2A2150;}
+  .success-msg{
+    background:#fff; border:1px solid #EDE3F5; border-radius:24px; padding:56px 36px;
+    text-align:center; box-shadow:0 10px 30px rgba(90,60,150,0.07);
+  }
+  .success-icon{
+    width:56px; height:56px; border-radius:50%; background:#4FD1C5; color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700;
+    margin:0 auto 18px;
+  }
+  .success-msg h3{color:#5B3E96; font-size:22px; margin-bottom:10px;}
+  .success-msg p{color:#6b6480; font-size:14.5px; margin-bottom:22px;}
 
-@media (max-width: 860px){
-.booking-layout{grid-template-columns:1fr;}
-.field-row{grid-template-columns:1fr;}
-}
+  .booking-side{display:flex; flex-direction:column; gap:20px;}
+  .side-card{
+    background:#fff; border:1px solid #EDE3F5; border-radius:20px; padding:26px;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .side-card h3{font-size:15px; color:#5B3E96; margin-bottom:2px;}
+  .offer-side{background:#FBD3C7; border:none; text-align:center;}
+  .offer-side .b-pct{font-family:'Fredoka',sans-serif; font-weight:700; color:#FF6F61;}
+  .offer-side p{font-size:13px; color:#2A2150;}
 
-footer{
-background:#4A3179; padding:34px 0; text-align:center;
-}
-footer p{color:#EDE6FA; font-size:13px;}
-footer .fbrand{color:#FBD3C7; font-family:‘Fredoka’,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px;}
+  @media (max-width: 860px){
+    .booking-layout{grid-template-columns:1fr;}
+    .field-row{grid-template-columns:1fr;}
+  }
 
-@media (max-width: 860px){
-.nav-links{position:fixed; top:76px; left:0; right:0; background:#5B3E96;
-flex-direction:column; align-items:flex-start; padding:20px 28px; gap:18px;
-transform:translateY(-140%); transition:transform .25s ease; z-index:40;}
-.nav-links.open{transform:translateY(0);}
-.nav-toggle{display:block; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;}
-.contact-dropdown{display:none;}
-#navPhoneMobile{display:inline-block;}
-.hero-grid{grid-template-columns:1fr; padding-top:40px;}
-.hero-art-col{order:-1; margin-bottom:10px;}
-.service-grid{grid-template-columns:1fr 1fr;}
-.steps{grid-template-columns:1fr;}
-.contact-card{grid-template-columns:1fr; padding:36px 26px;}
-}
-@media (max-width: 560px){
-.service-grid{grid-template-columns:1fr;}
-.offer-banner .wrap{flex-direction:column; text-align:center;}
-.stat-strip .wrap{flex-direction:column; gap:6px;}
-}
+  footer{
+    background:#4A3179; padding:34px 0; text-align:center;
+  }
+  footer p{color:#EDE6FA; font-size:13px;}
+  footer .fbrand{color:#FBD3C7; font-family:'Fredoka',sans-serif; font-weight:600; font-size:15px; margin-bottom:6px;}
+  .footer-referral{margin-top:10px; font-size:12px; color:#C9C0E8;}
 
-.reveal{
-opacity:0; transform:translateY(24px);
-transition:opacity .7s ease, transform .7s ease;
-}
-.reveal.visible{opacity:1; transform:translateY(0);}
-.reveal-stagger.visible .service-card,
-.reveal-stagger.visible .step{
-animation:staggerIn .6s ease forwards;
-}
-.reveal-stagger .service-card:nth-child(1), .reveal-stagger .step:nth-child(1){animation-delay:0s;}
-.reveal-stagger .service-card:nth-child(2), .reveal-stagger .step:nth-child(2){animation-delay:.08s;}
-.reveal-stagger .service-card:nth-child(3), .reveal-stagger .step:nth-child(3){animation-delay:.16s;}
-.reveal-stagger .service-card:nth-child(4){animation-delay:.24s;}
-.reveal-stagger .service-card:nth-child(5){animation-delay:.32s;}
-.reveal-stagger .service-card:nth-child(6){animation-delay:.4s;}
-.reveal-stagger .service-card, .reveal-stagger .step{opacity:0;}
-@keyframes staggerIn{
-from{opacity:0; transform:translateY(18px);}
-to{opacity:1; transform:translateY(0);}
-}
+  .mobile-cta-bar{
+    display:none; position:fixed; bottom:0; left:0; right:0; z-index:70;
+    background:#fff; box-shadow:0 -4px 18px rgba(42,33,80,0.14);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    gap:10px;
+  }
+  .mobile-cta-btn{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+    padding:13px; border-radius:12px; font-weight:700; font-size:14px;
+  }
+  .mobile-cta-call{background:#F4EFFA; color:#5B3E96;}
+  .mobile-cta-book{background:#4FD1C5; color:#2A2150;}
+  @media (max-width: 640px){
+    .mobile-cta-bar{display:flex;}
+    body{padding-bottom:72px;}
+  }
 
-.service-card{transition:transform .25s ease, box-shadow .25s ease;}
-.service-card:hover{transform:translateY(-6px); box-shadow:0 16px 30px rgba(90,60,150,0.14);}
-.service-card .icon{transition:transform .25s ease;}
-.service-card:hover .icon{transform:scale(1.08) rotate(-4deg);}
+  @media (max-width: 860px){
+    .nav-links{position:fixed; top:76px; left:0; right:0; background:#5B3E96;
+      flex-direction:column; align-items:flex-start; padding:20px 28px; gap:18px;
+      transform:translateY(-140%); transition:transform .25s ease; z-index:40;}
+    .nav-links.open{transform:translateY(0);}
+    .nav-toggle{display:block; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;}
+    .contact-dropdown{display:none;}
+    #navPhoneMobile{display:inline-block;}
+    .hero-grid{grid-template-columns:1fr; padding-top:40px;}
+    .hero-art-col{order:-1; margin-bottom:10px;}
+    .service-grid{grid-template-columns:1fr 1fr;}
+    .steps{grid-template-columns:1fr;}
+    .contact-card{grid-template-columns:1fr; padding:36px 26px;}
+  }
+  @media (max-width: 560px){
+    .service-grid{grid-template-columns:1fr;}
+    .offer-banner .wrap{flex-direction:column; text-align:center;}
+    .stat-strip .wrap{flex-direction:column; gap:6px;}
+  }
 
-.badge{animation:floaty 4s ease-in-out infinite;}
-@keyframes floaty{
-0%,100%{transform:rotate(-10deg) translateY(0);}
-50%{transform:rotate(-10deg) translateY(-8px);}
-}
+  .reveal{
+    opacity:0; transform:translateY(24px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.visible{opacity:1; transform:translateY(0);}
+  .reveal-stagger.visible .service-card,
+  .reveal-stagger.visible .step{
+    animation:staggerIn .6s ease forwards;
+  }
+  .reveal-stagger .service-card:nth-child(1), .reveal-stagger .step:nth-child(1){animation-delay:0s;}
+  .reveal-stagger .service-card:nth-child(2), .reveal-stagger .step:nth-child(2){animation-delay:.08s;}
+  .reveal-stagger .service-card:nth-child(3), .reveal-stagger .step:nth-child(3){animation-delay:.16s;}
+  .reveal-stagger .service-card:nth-child(4){animation-delay:.24s;}
+  .reveal-stagger .service-card:nth-child(5){animation-delay:.32s;}
+  .reveal-stagger .service-card:nth-child(6){animation-delay:.4s;}
+  .reveal-stagger .service-card, .reveal-stagger .step{opacity:0;}
+  @keyframes staggerIn{
+    from{opacity:0; transform:translateY(18px);}
+    to{opacity:1; transform:translateY(0);}
+  }
 
-.step .num{transition:transform .25s ease;}
-.step:hover .num{transform:scale(1.1);}
+  .service-card{transition:transform .25s ease, box-shadow .25s ease;}
+  .service-card:hover{transform:translateY(-6px); box-shadow:0 16px 30px rgba(90,60,150,0.14);}
+  .service-card .icon{transition:transform .25s ease;}
+  .service-card:hover .icon{transform:scale(1.08) rotate(-4deg);}
 
-.nav-cta, .contact-dd-btn{transition:transform .18s ease, box-shadow .18s ease;}
-.nav-cta:hover, .contact-dd-btn:hover{transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,0.18);}
+  .badge{animation:floaty 4s ease-in-out infinite;}
+  @keyframes floaty{
+    0%,100%{transform:rotate(-10deg) translateY(0);}
+    50%{transform:rotate(-10deg) translateY(-8px);}
+  }
 
-@media (prefers-reduced-motion: reduce){
-.reveal, .reveal-stagger .service-card, .reveal-stagger .step,
-.service-card, .badge, .nav-cta, .contact-dd-btn{
-animation:none !important; transition:none !important;
-opacity:1 !important; transform:none !important;
-}
-}
+  .step .num{transition:transform .25s ease;}
+  .step:hover .num{transform:scale(1.1);}
 
-.testimonials-section{padding:70px 0 90px; background:#FFF8F3;}
-.testimonial-grid{
-margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
-}
-.testimonial-card{
-background:#fff; border:1.5px dashed #E4DAF2; border-radius:18px;
-padding:26px; text-align:center; color:#9089a0;
-}
-.testimonial-card .stars{color:#FBD3C7; font-size:16px; margin-bottom:10px;}
-.testimonial-card p{font-size:13px; font-style:italic; line-height:1.5;}
-@media (max-width: 860px){
-.testimonial-grid{grid-template-columns:1fr;}
-}
+  .nav-cta, .contact-dd-btn{transition:transform .18s ease, box-shadow .18s ease;}
+  .nav-cta:hover, .contact-dd-btn:hover{transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,0.18);}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal-stagger .service-card, .reveal-stagger .step,
+    .service-card, .badge, .nav-cta, .contact-dd-btn{
+      animation:none !important; transition:none !important;
+      opacity:1 !important; transform:none !important;
+    }
+  }
+
+  .pricing-section{padding:88px 0 40px 0; background:#FFF8F3;}
+  .clean-cards{
+    margin-top:52px; display:grid; grid-template-columns:1fr 1fr; gap:24px;
+  }
+  .clean-card{
+    background:#fff; border-radius:22px; overflow:hidden;
+    border:1px solid #EDE3F5; box-shadow:0 8px 22px rgba(90,60,150,0.07);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .clean-card:hover{transform:translateY(-6px); box-shadow:0 18px 34px rgba(90,60,150,0.14);}
+  .clean-head{
+    padding:20px 26px; font-family:'Fredoka',sans-serif; font-weight:700;
+    font-size:19px; color:#fff;
+  }
+  .clean-head-base{background:#5B3E96;}
+  .clean-head-deep{background:#FF6F61;}
+  .clean-body{padding:26px;}
+  .clean-list{list-style:none; display:flex; flex-direction:column; gap:13px;}
+  .clean-list li{
+    display:flex; align-items:flex-start; gap:10px; font-size:13.5px; color:#4a4460; line-height:1.4;
+  }
+  .clean-list .check{color:#2FA99D; font-weight:700; flex-shrink:0; margin-top:1px;}
+  .clean-from{
+    margin-top:22px; padding-top:18px; border-top:1px solid #F1ECFA;
+  }
+  .cf-label{
+    display:flex; align-items:center; gap:8px;
+    font-size:10.5px; color:#9089a0; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:10px;
+  }
+  .cf-discount-tag{
+    background:#FF6F61; color:#fff; font-size:10px; font-weight:700;
+    padding:2px 8px; border-radius:20px; text-transform:none; letter-spacing:0;
+  }
+  .cf-discount-tag-deep{background:#5B3E96;}
+  .cf-price-rows{display:flex; flex-direction:column; gap:8px;}
+  .cf-price-row{display:flex; align-items:baseline; gap:10px;}
+  .cf-dwelling{
+    font-size:12px; font-weight:600; color:#6b6480; width:50px; flex-shrink:0;
+  }
+  .cf-strike{
+    font-family:'Fredoka',sans-serif; font-weight:600; font-size:13px; color:#c9c3d8;
+    text-decoration:line-through;
+  }
+  .cf-amount{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:19px; color:#2A2150;
+  }
+
+  .estimator{
+    margin-top:44px; background:#5B3E96; border-radius:22px; padding:36px;
+    position:relative; overflow:hidden;
+  }
+  .est-head .est-eyebrow{
+    font-weight:700; font-size:11.5px; letter-spacing:0.12em; color:#4FD1C5; text-transform:uppercase;
+  }
+  .est-head h3{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:24px; color:#fff; margin-top:8px;
+  }
+  .est-head p{font-size:13px; color:#EDE6FA; margin-top:6px;}
+
+  .est-grid{
+    margin-top:26px; display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+  }
+  .est-control label{
+    display:block; font-size:11.5px; font-weight:700; color:#EDE6FA; text-transform:uppercase;
+    letter-spacing:0.04em; margin-bottom:8px;
+  }
+  .est-toggle{
+    display:flex; background:rgba(255,255,255,0.1); border-radius:12px; padding:4px;
+    position:relative;
+  }
+  .est-toggle-thumb{
+    position:absolute; top:4px; left:4px; height:calc(100% - 8px);
+    background:#4FD1C5; border-radius:9px;
+    transition:left .28s cubic-bezier(.4,0,.2,1), width .28s cubic-bezier(.4,0,.2,1);
+    z-index:0;
+  }
+  .est-toggle-btn{
+    flex:1; background:none; border:none; padding:10px 8px; border-radius:9px;
+    font-family:'Poppins',sans-serif; font-weight:600; font-size:13px; color:#EDE6FA;
+    cursor:pointer; transition:color .15s ease, transform .1s ease;
+    position:relative; z-index:1;
+  }
+  .est-toggle-btn.active{color:#2A2150;}
+  .est-toggle-btn:active, .est-freq-btn:active, .est-step-btn:active, .est-extra-chip:active{
+    transform:scale(0.95);
+  }
+  .est-stepper{
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(255,255,255,0.1); border-radius:12px; padding:6px 10px;
+  }
+  .est-step-btn{
+    width:32px; height:32px; border-radius:8px; border:none; background:rgba(255,255,255,0.15);
+    color:#fff; font-size:18px; font-weight:700; cursor:pointer; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .15s ease, transform .1s ease;
+  }
+  .est-step-btn:hover{background:#4FD1C5; color:#2A2150;}
+  .est-step-val{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:16px; color:#fff;
+    display:inline-block; transition:transform .2s ease;
+  }
+  .est-step-val.bump{transform:scale(1.3);}
+
+  .est-freq-control{margin-top:22px;}
+  .est-freq-row{
+    display:flex; justify-content:center; flex-wrap:wrap; gap:12px;
+  }
+  .est-freq-btn{
+    flex:1 1 180px; max-width:220px;
+    background:rgba(255,255,255,0.1); border:2px solid transparent; border-radius:12px;
+    padding:12px 6px; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px;
+    transition:background .15s ease, border-color .15s ease, transform .1s ease;
+  }
+  .est-freq-btn .fb-name{font-family:'Poppins',sans-serif; font-weight:600; font-size:11.5px; color:#EDE6FA; text-align:center;}
+  .est-freq-btn .fb-badge{
+    background:#FF6F61; color:#fff; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:20px;
+  }
+  .est-freq-btn .fb-badge-neutral{background:rgba(255,255,255,0.25); color:#EDE6FA;}
+  .est-freq-btn.active{background:rgba(79,209,197,0.18); border-color:#4FD1C5;}
+  .est-freq-btn.active .fb-name{color:#fff;}
+
+  .est-extras-control{margin-top:22px;}
+  .est-extras-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:10px;
+  }
+  .est-extra-chip{
+    background:rgba(255,255,255,0.1); border:2px solid transparent; border-radius:12px;
+    padding:12px 8px; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px;
+    text-align:center; transition:background .15s ease, border-color .15s ease, transform .12s ease;
+  }
+  .est-extra-chip .ec-icon{font-size:19px; color:#EDE6FA; display:inline-flex;}
+  .est-extra-chip .ec-icon svg{width:22px; height:22px;}
+  .est-extra-chip.selected .ec-icon{color:#2A2150;}
+  .est-extra-chip .ec-label{font-size:11.5px; font-weight:600; color:#EDE6FA; line-height:1.3;}
+  .est-extra-chip .ec-price{font-family:'Fredoka',sans-serif; font-weight:700; font-size:13.5px; color:#fff;}
+  .est-extra-chip.selected{
+    background:#4FD1C5; border-color:#4FD1C5; transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+  }
+  .est-extra-chip.selected .ec-label, .est-extra-chip.selected .ec-price{color:#2A2150;}
+  .est-extra-note-info{color:#B3ABD6; font-size:11px;}
+  .est-extra-note{margin-top:12px; font-size:11.5px; color:#C9C0E8; font-style:italic;}
+
+  .est-result{
+    margin-top:30px; padding-top:26px; border-top:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+  }
+  .est-result-row{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:24px; flex-wrap:wrap;
+    margin-bottom:34px;
+  }
+  .est-cta-wrap{margin-top:12px; display:flex; justify-content:center;}
+  .est-result-label{font-size:11.5px; color:#EDE6FA; text-transform:uppercase; letter-spacing:0.04em;}
+  .est-result-label span{text-transform:none; letter-spacing:0; font-size:11px; opacity:0.8;}
+  .est-first-tag{
+    background:#FF6F61; color:#fff; font-size:9.5px; font-weight:700;
+    padding:2px 7px; border-radius:20px; margin-left:4px; opacity:1 !important;
+  }
+  .est-first-real-note{
+    margin-top:6px; font-size:11.5px; font-weight:600; color:#4FD1C5;
+  }
+  .est-result-amount{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:34px; color:#fff; margin-top:4px;
+    transition:transform .25s ease;
+  }
+  .est-result-amount.bump{transform:scale(1.08);}
+  .est-result-amount-teal{color:#4FD1C5;}
+  .est-result-amount-row{display:flex; align-items:baseline; gap:10px;}
+  .est-result-strike{
+    font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#C9C0E8;
+    text-decoration:line-through; margin-top:4px;
+  }
+  .est-note{margin-top:6px; font-size:11px; color:#C9C0E8; font-style:italic;}
+
+  .est-section-divider{
+    display:flex; align-items:center; gap:14px; margin:38px 0 30px;
+  }
+  .est-divider-line{flex:1; height:1px; background:rgba(255,255,255,0.2);}
+  .est-divider-text{
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:15px; color:#fff;
+    white-space:nowrap;
+  }
+
+  @media (max-width: 860px){
+    .est-grid{grid-template-columns:1fr 1fr;}
+    .est-extras-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width: 560px){
+    .est-grid{grid-template-columns:1fr;}
+    .est-freq-btn{flex:1 1 45%;}
+    .est-extras-grid{grid-template-columns:1fr 1fr;}
+    .est-result-row{flex-direction:column;}
+  }
+
+  .first-visit-note{
+    margin-top:44px; background:#fff; border:1.5px dashed #B99AE0; border-radius:16px;
+    padding:18px 22px; display:flex; align-items:flex-start; gap:12px;
+    font-size:13px; color:#4a4460; line-height:1.5;
+  }
+  .first-visit-note .fvn-icon{font-size:18px; flex-shrink:0;}
+  .first-visit-note strong{color:#5B3E96;}
+
+  .pricing-footnote{
+    margin-top:20px; text-align:center; font-size:11.5px; color:#9089a0; font-style:italic;
+  }
+
+  @media (max-width: 900px){
+    .clean-cards{grid-template-columns:1fr;}
+  }
+
+  .about-section{padding:90px 0; background:#FFF8F3;}
+  .about-grid{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:center;
+  }
+  .about-photo-placeholder{
+    aspect-ratio:1/1; background:#F4EFFA; border:2px dashed #D9CCEF; border-radius:24px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:12px; color:#B3A3D9;
+  }
+  .about-photo-placeholder span{font-size:13px; font-weight:600;}
+  .about-text .section-eyebrow{text-align:left;}
+  .about-p{font-size:14.5px; line-height:1.7; color:#5a5470; margin-top:16px; max-width:520px;}
+  .about-badges{margin-top:28px; display:flex; flex-direction:column; gap:16px;}
+  .about-badge{
+    display:flex; align-items:flex-start; gap:12px; font-size:13.5px; color:#3a3450; font-weight:500;
+  }
+  .about-badge svg{flex-shrink:0; color:#2FA99D; margin-top:1px;}
+  @media (max-width: 860px){
+    .about-grid{grid-template-columns:1fr; gap:32px;}
+    .about-photo-placeholder{max-width:280px; margin:0 auto;}
+  }
+
+  .faq-section{padding:70px 0 90px; background:#FFF8F3;}
+  .faq-list{margin-top:40px; max-width:720px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column; gap:12px;}
+  .faq-item{
+    background:#fff; border:1px solid #EDE3F5; border-radius:16px; overflow:hidden;
+    box-shadow:0 4px 14px rgba(90,60,150,0.05);
+  }
+  .faq-q{
+    width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:20px 22px; background:none; border:none; cursor:pointer; text-align:left;
+    font-family:'Poppins',sans-serif; font-weight:600; font-size:14.5px; color:#2A2150;
+  }
+  .faq-caret{
+    flex-shrink:0; width:26px; height:26px; border-radius:50%; background:#F4EFFA;
+    color:#5B3E96; font-size:16px; font-weight:700; display:flex; align-items:center; justify-content:center;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .faq-item.open .faq-caret{transform:rotate(45deg); background:#4FD1C5; color:#2A2150;}
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .3s ease;
+  }
+  .faq-item.open .faq-a{max-height:200px;}
+  .faq-a p{padding:0 22px 20px; font-size:13.5px; color:#6b6480; line-height:1.6;}
 </style>
-
 </head>
 <body>
 
@@ -435,6 +740,7 @@ padding:26px; text-align:center; color:#9089a0;
     <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
     <div class="nav-links" id="navLinks">
       <a href="#services">Services</a>
+      <a href="#estimator">Soumission</a>
       <a href="#comment">Comment ça marche</a>
       <a href="#contact">Réserver</a>
       <a href="tel:4388827263" class="nav-cta" id="navPhoneMobile">438-882-7263</a>
@@ -446,16 +752,16 @@ padding:26px; text-align:center; color:#9089a0;
       <div class="contact-dd-panel" id="contactDdPanel">
         <div class="dd-sub">438-882-7263</div>
         <a href="tel:4388827263">
-          <span class="emoji">📞</span> Appeler
+          <span class="emoji"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M4 5c0-1 1-2 2-2h2l2 5-2 1.5c1 2.5 2.5 4 5 5L14.5 13l5 2v2c0 1-1 2-2 2C10 19 4 13 4 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span> Appeler
         </a>
         <a href="sms:4388827263">
-          <span class="emoji">💬</span> Texter
+          <span class="emoji"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M4 5h16v10H8l-4 4V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span> Texter
         </a>
         <button type="button" class="dd-copy-btn" id="ddCopyBtn">
-          <span class="emoji">📋</span> <span id="ddCopyLabel">Copier le numéro</span>
+          <span class="emoji"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><rect x="6" y="4" width="12" height="16" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="9" y="2.5" width="6" height="3" rx="1" fill="currentColor"/></svg></span> <span id="ddCopyLabel">Copier le numéro</span>
         </button>
         <a href="#contact">
-          <span class="emoji">📝</span> Remplir le formulaire
+          <span class="emoji"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 3h9l4 4v14H6V3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 15.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span> Remplir le formulaire
         </a>
       </div>
     </div>
@@ -499,43 +805,391 @@ padding:26px; text-align:center; color:#9089a0;
   <div class="wrap">
     <div class="section-eyebrow reveal">Nos services</div>
     <h2 class="section-title reveal">Un ménage complet, de fond en comble</h2>
-    <p class="section-sub reveal">Maisons, condos et appartements &mdash; à Mirabel, Blainville et Saint-Eustache.</p>
+    <p class="section-sub reveal">Maisons, condos et appartements &mdash; partout dans les Laurentides : Mirabel, Saint-Janvier, Blainville, Sainte-Thérèse et les environs.</p>
 
-```
-<div class="service-grid reveal reveal-stagger">
-  <div class="service-card">
-    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 10h16v2a6 6 0 01-6 6h-4a6 6 0 01-6-6v-2z" stroke="#5B3E96" stroke-width="2" stroke-linejoin="round"/><path d="M4 10a2 2 0 012-2M20 10a2 2 0 00-2-2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M9 6V5M12 6V4M15 6v1" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
-    <h3>Cuisine &amp; électroménagers</h3>
-    <p>Comptoirs, évier, cuisinière et l'intérieur du four et du micro-ondes.</p>
+    <div class="service-grid reveal reveal-stagger">
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 10h16v2a6 6 0 01-6 6h-4a6 6 0 01-6-6v-2z" stroke="#5B3E96" stroke-width="2" stroke-linejoin="round"/><path d="M4 10a2 2 0 012-2M20 10a2 2 0 00-2-2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M9 6V5M12 6V4M15 6v1" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Cuisine &amp; électroménagers</h3>
+        <p>Comptoirs, évier, cuisinière et l'intérieur du four et du micro-ondes.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18v2a4 4 0 01-4 4H7a4 4 0 01-4-4v-2z" stroke="#5B3E96" stroke-width="2" stroke-linejoin="round"/><path d="M5 12V7a2 2 0 012-2h1" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="8" r="1.3" fill="#5B3E96"/><path d="M3 18v1.5M21 18v1.5" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Salle de bain en profondeur</h3>
+        <p>Douche, bain, toilette et robinetterie désinfectés du plancher au plafond.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 19v-6a2 2 0 012-2h14a2 2 0 012 2v6" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19v1.6M21 19v1.6" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M5 11V9a2 2 0 012-2h2a2 2 0 012 2v2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11V9a2 2 0 012-2h2a2 2 0 012 2v2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Chambres &amp; salon</h3>
+        <p>Époussetage, rangement léger et lits faits sur demande.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke="#5B3E96" stroke-width="2"/><path d="M12 4v16M4 12h16" stroke="#5B3E96" stroke-width="2"/></svg></div>
+        <h3>Époussetage &amp; vitres</h3>
+        <p>Surfaces, cadrages et fenêtres intérieures, sans traces.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="15" width="9" height="5.5" rx="2" fill="#5B3E96"/><circle cx="8.2" cy="21.3" r="1.2" fill="#5B3E96"/><circle cx="12.8" cy="21.3" r="1.2" fill="#5B3E96"/><path d="M10.5 15V6.5a1.5 1.5 0 011.5-1.5" stroke="#5B3E96" stroke-width="2.2" stroke-linecap="round"/><path d="M12 5l6-1.5" stroke="#5B3E96" stroke-width="2.2" stroke-linecap="round"/><circle cx="18.4" cy="3" r="1.4" fill="#5B3E96"/></svg></div>
+        <h3>Planchers lavés &amp; aspirés</h3>
+        <p>Bois, céramique et tapis &mdash; adaptés à chaque surface.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="4.5" r="1.4" stroke="#5B3E96" stroke-width="2"/><path d="M12 5.8v1.7" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M4 17l7.3-5.2a1.1 1.1 0 011.4 0L20 17" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17h18" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Organisation des garde-robes</h3>
+        <p>On remet de l'ordre pour un espace plus fonctionnel.</p>
+      </div>
+    </div>
   </div>
-  <div class="service-card">
-    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18v2a4 4 0 01-4 4H7a4 4 0 01-4-4v-2z" stroke="#5B3E96" stroke-width="2" stroke-linejoin="round"/><path d="M5 12V7a2 2 0 012-2h1" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="8" r="1.3" fill="#5B3E96"/><path d="M3 18v1.5M21 18v1.5" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
-    <h3>Salle de bain en profondeur</h3>
-    <p>Douche, bain, toilette et robinetterie désinfectés du plancher au plafond.</p>
-  </div>
-  <div class="service-card">
-    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 19v-6a2 2 0 012-2h14a2 2 0 012 2v6" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19v1.6M21 19v1.6" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M5 11V9a2 2 0 012-2h2a2 2 0 012 2v2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11V9a2 2 0 012-2h2a2 2 0 012 2v2" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <h3>Chambres &amp; salon</h3>
-    <p>Époussetage, rangement léger et lits faits sur demande.</p>
-  </div>
-  <div class="service-card">
-    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke="#5B3E96" stroke-width="2"/><path d="M12 4v16M4 12h16" stroke="#5B3E96" stroke-width="2"/></svg></div>
-    <h3>Époussetage &amp; vitres</h3>
-    <p>Surfaces, cadrages et fenêtres intérieures, sans traces.</p>
-  </div>
-  <div class="service-card">
-    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="15" width="9" height="5.5" rx="2" fill="#5B3E96"/><circle cx="8.2" cy="21.3" r="1.2" fill="#5B3E96"/><circle cx="12.8" cy="21.3" r="1.2" fill="#5B3E96"/><path d="M10.5 15V6.5a1.5 1.5 0 011.5-1.5" stroke="#5B3E96" stroke-width="2.2" stroke-linecap="round"/><path d="M12 5l6-1.5" stroke="#5B3E96" stroke-width="2.2" stroke-linecap="round"/><circle cx="18.4" cy="3" r="1.4" fill="#5B3E96"/></svg></div>
-    <h3>Planchers lavés &amp; aspirés</h3>
-    <p>Bois, céramique et tapis &mdash; adaptés à chaque surface.</p>
-  </div>
-  <div class="service-card">
-    <div class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="4.5" r="1.4" stroke="#5B3E96" stroke-width="2"/><path d="M12 5.8v1.7" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/><path d="M4 17l7.3-5.2a1.1 1.1 0 011.4 0L20 17" stroke="#5B3E96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17h18" stroke="#5B3E96" stroke-width="2" stroke-linecap="round"/></svg></div>
-    <h3>Organisation des garde-robes</h3>
-    <p>On remet de l'ordre pour un espace plus fonctionnel.</p>
-  </div>
-</div>
-```
+</section>
 
+<section class="pricing-section" id="tarifs">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">Nos services</div>
+    <h2 class="section-title reveal">Ménage de base ou en profondeur</h2>
+    <p class="section-sub reveal">Deux formules claires, plus des extras au besoin.</p>
+
+    <div class="clean-cards reveal reveal-stagger">
+      <div class="clean-card">
+        <div class="clean-head clean-head-base">Ménage de base</div>
+        <div class="clean-body">
+          <ul class="clean-list">
+            <li><span class="check">✓</span> Aspirateur et lavage des planchers</li>
+            <li><span class="check">✓</span> Cuisine (comptoirs, évier, extérieur armoires, intérieur micro-ondes)</li>
+            <li><span class="check">✓</span> Appareils de cuisine &mdash; extérieur (four, réfrigérateur, lave-vaisselle)</li>
+            <li><span class="check">✓</span> Salle de bain &mdash; lavage complet</li>
+            <li><span class="check">✓</span> Retrait des poubelles</li>
+            <li><span class="check">✓</span> Lits faits avec draps propres (fournis par le client)</li>
+          </ul>
+          <div class="clean-from">
+            <span class="cf-label">À partir de <span class="cf-discount-tag">-20%</span></span>
+            <div class="cf-price-rows">
+              <div class="cf-price-row">
+                <span class="cf-dwelling">Condo</span>
+                <span class="cf-strike">110 $</span>
+                <span class="cf-amount">90 $</span>
+              </div>
+              <div class="cf-price-row">
+                <span class="cf-dwelling">Maison</span>
+                <span class="cf-strike">160 $</span>
+                <span class="cf-amount">135 $</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clean-card clean-card-deep">
+        <div class="clean-head clean-head-deep">Ménage en profondeur</div>
+        <div class="clean-body">
+          <ul class="clean-list">
+            <li><span class="check">✓</span> Tout ce qui est inclus dans le ménage de base</li>
+            <li><span class="check">✓</span> Plinthes et rebords de fenêtres</li>
+            <li><span class="check">✓</span> Portes intérieures et façades d'armoires</li>
+            <li><span class="check">✓</span> Dépoussiérage des luminaires</li>
+            <li><span class="check">✓</span> Intérieur du four et du réfrigérateur</li>
+            <li><span class="check">✓</span> Vitres intérieures</li>
+            <li><span class="check">✓</span> Derrière et sous les meubles</li>
+          </ul>
+          <div class="clean-from">
+            <span class="cf-label">À partir de <span class="cf-discount-tag cf-discount-tag-deep">-20%</span></span>
+            <div class="cf-price-rows">
+              <div class="cf-price-row">
+                <span class="cf-dwelling">Condo</span>
+                <span class="cf-strike">170 $</span>
+                <span class="cf-amount">140 $</span>
+              </div>
+              <div class="cf-price-row">
+                <span class="cf-dwelling">Maison</span>
+                <span class="cf-strike">250 $</span>
+                <span class="cf-amount">210 $</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="first-visit-note reveal">
+      <span class="fvn-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 3l1.8 5.6L19 10l-5.2 1.4L12 17l-1.8-5.6L5 10l5.2-1.4L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+      <div>
+        <strong>Choisissez base ou profondeur selon vos besoins</strong> &mdash; le nettoyage en profondeur couvre plus de détails (plinthes, luminaires, intérieur du four et du frigo, vitres, etc.). Réservez à la fréquence de votre choix pour un prix réduit.
+      </div>
+    </div>
+
+    <div class="estimator reveal" id="estimator">
+      <div class="est-head">
+        <div class="est-eyebrow">Estimation gratuite</div>
+        <h3>Calculez votre prix</h3>
+        <p>Ajustez selon votre logement et vos extras &mdash; le prix se met à jour en direct.</p>
+      </div>
+
+      <div class="est-grid">
+        <div class="est-control">
+          <label>Type de logement</label>
+          <div class="est-toggle" id="dwellingToggle">
+            <div class="est-toggle-thumb" id="dwellingThumb"></div>
+            <button type="button" class="est-toggle-btn active" data-value="condo">Condo</button>
+            <button type="button" class="est-toggle-btn" data-value="maison">Maison</button>
+          </div>
+        </div>
+
+        <div class="est-control">
+          <label>Type de ménage</label>
+          <div class="est-toggle" id="serviceToggle">
+            <div class="est-toggle-thumb" id="serviceThumb"></div>
+            <button type="button" class="est-toggle-btn active" data-value="base">Base</button>
+            <button type="button" class="est-toggle-btn" data-value="deep">Profondeur</button>
+          </div>
+        </div>
+
+        <div class="est-control">
+          <label>Chambres</label>
+          <div class="est-stepper">
+            <button type="button" class="est-step-btn" id="bedroomMinus">&minus;</button>
+            <span class="est-step-val" id="bedroomVal">1</span>
+            <button type="button" class="est-step-btn" id="bedroomPlus">+</button>
+          </div>
+        </div>
+
+        <div class="est-control">
+          <label>Salles de bain</label>
+          <div class="est-stepper">
+            <button type="button" class="est-step-btn" id="bathroomMinus">&minus;</button>
+            <span class="est-step-val" id="bathroomVal">1</span>
+            <button type="button" class="est-step-btn" id="bathroomPlus">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="est-control est-freq-control">
+        <label>Fréquence</label>
+        <div class="est-freq-row" id="freqToggle">
+          <button type="button" class="est-freq-btn" data-value="weekly" data-discount="20">
+            <span class="fb-name">Hebdomadaire</span>
+            <span class="fb-badge">-20%</span>
+          </button>
+          <button type="button" class="est-freq-btn" data-value="biweekly" data-discount="15">
+            <span class="fb-name">Aux 2 semaines</span>
+            <span class="fb-badge">-15%</span>
+          </button>
+          <button type="button" class="est-freq-btn" data-value="monthly" data-discount="10">
+            <span class="fb-name">Mensuel</span>
+            <span class="fb-badge">-10%</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="est-control est-extras-control">
+        <label>Extras &mdash; cliquez pour ajouter</label>
+        <div class="est-extras-grid" id="extrasGrid">
+          <button type="button" class="est-extra-chip" data-price="40" data-label="Intérieur du réfrigérateur">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2.5" width="14" height="19" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 10h14" stroke="currentColor" stroke-width="1.6"/><path d="M8 5.5v2M8 13v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="ec-label">Intérieur du réfrigérateur</span><span class="ec-price">40 $</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="40" data-label="Intérieur du four">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3" width="17" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="5.5" y="5" width="13" height="3" rx="0.8" stroke="currentColor" stroke-width="1.4"/><rect x="6" y="10.5" width="12" height="8" rx="1.2" stroke="currentColor" stroke-width="1.6"/><circle cx="16.3" cy="6.5" r="0.6" fill="currentColor"/><circle cx="18" cy="6.5" r="0.6" fill="currentColor"/></svg></span><span class="ec-label">Intérieur du four</span><span class="ec-price">40 $</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="30" data-label="Vitres intérieures">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3.5" width="16" height="17" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5v17M4 12h16" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="ec-label">Vitres intérieures</span><span class="ec-price">30 $+</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="40" data-label="Intérieur des armoires">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="2.5" width="7.5" height="19" rx="1.2" stroke="currentColor" stroke-width="1.6"/><rect x="12.5" y="2.5" width="7.5" height="19" rx="1.2" stroke="currentColor" stroke-width="1.6"/><circle cx="9.7" cy="12" r="0.9" fill="currentColor"/><circle cx="14.3" cy="12" r="0.9" fill="currentColor"/></svg></span><span class="ec-label">Intérieur des armoires</span><span class="ec-price">40 $+</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="15" data-label="Lavage, séchage du linge">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 9l1.5-5h11L19 9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 9h16l-1.3 10.5a1.8 1.8 0 01-1.8 1.5H7.1a1.8 1.8 0 01-1.8-1.5L4 9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="14.5" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="ec-label">Lavage, séchage du linge</span><span class="ec-price">15 $</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="20" data-label="Pliage du linge">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 4h8l1.5 4-3 2v10H9.5v-10l-3-2L8 4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="ec-label">Pliage du linge</span><span class="ec-price">20 $+</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="30" data-label="Aspirateur sous les meubles">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="15" width="9" height="5.5" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="9.2" cy="21.3" r="1.1" fill="currentColor"/><circle cx="13.8" cy="21.3" r="1.1" fill="currentColor"/><path d="M11.5 15V6.5a1.5 1.5 0 011.5-1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M13 5l6-1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19.5" cy="3" r="1.2" stroke="currentColor" stroke-width="1.4"/></svg></span><span class="ec-label">Aspirateur sous les meubles</span><span class="ec-price">30 $</span>
+          </button>
+          <button type="button" class="est-extra-chip" data-price="40" data-label="Plinthes">
+            <span class="ec-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18h18M3 18l3-3M8 18l3-4M13 18l3-5M18 18l2-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ec-label">Plinthes</span><span class="ec-price">40 $+</span>
+          </button>
+        </div>
+        <div class="est-extra-note"><svg viewBox="0 0 24 24" fill="none" width="14" height="14" style="vertical-align:-2px;margin-right:4px;"><path d="M12 4a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" stroke="currentColor" stroke-width="1.6"/><path d="M12 5.8v1.7M4 17l7.3-5.2a1.1 1.1 0 011.4 0L20 17M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Organisation de garde-robe/armoires &mdash; selon estimation, contactez-nous</div>
+      </div>
+
+      <div class="est-result">
+        <div class="est-result-row">
+          <div class="est-result-block">
+            <div class="est-result-label">Premier ménage <span id="estFirstTypeLabel">(nettoyage de base)</span> <span class="est-first-tag">-20%</span></div>
+            <div class="est-result-amount-row">
+              <div class="est-result-strike" id="estFirstStrike"></div>
+              <div class="est-result-amount" id="estFirst">140 $</div>
+            </div>
+            <div class="est-first-real-note" id="estFirstRealNote" hidden>✓ Rabais réel de 20% &mdash; merci de choisir l'entretien hebdomadaire!</div>
+          </div>
+          <div class="est-result-block" id="recurringBlock" hidden>
+            <div class="est-result-label" id="recurringLabel">Ménages suivants <span>(entretien)</span></div>
+            <div class="est-result-amount-row">
+              <div class="est-result-strike" id="estStrike"></div>
+              <div class="est-result-amount est-result-amount-teal" id="estRecurring"></div>
+            </div>
+          </div>
+        </div>
+        <div class="est-cta-wrap">
+          <a href="#contact" class="btn-primary" id="estCta">RÉSERVER CE FORFAIT</a>
+        </div>
+      </div>
+      <p class="est-note">Estimation indicative &mdash; le prix final peut varier selon l'état et la superficie exacte du logement.</p>
+
+      <div class="est-section-divider" id="contact">
+        <span class="est-divider-line"></span>
+        <span class="est-divider-text">Finalisez votre réservation</span>
+        <span class="est-divider-line"></span>
+      </div>
+
+      <div class="facture reveal" id="factureBox">
+      <div class="facture-head">
+        <span class="facture-title"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" style="vertical-align:-3px;margin-right:6px;"><path d="M6 2h12v19l-2.5-1.5L13 21l-1-1.5L11 21l-2.5-1.5L6 21V2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7h6M9 10.5h6M9 14h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Votre facture estimée</span>
+        <span class="facture-sub">Mise à jour automatique selon vos choix ci-dessus</span>
+      </div>
+      <div class="facture-row">
+        <span class="facture-label">Logement</span>
+        <span class="facture-dots"></span>
+        <span class="facture-val" id="factType">Condo &mdash; 1 ch. / 1 sdb.</span>
+      </div>
+      <div class="facture-row">
+        <span class="facture-label">Fréquence</span>
+        <span class="facture-dots"></span>
+        <span class="facture-val" id="factFreq">Non choisie</span>
+      </div>
+      <div class="facture-extras" id="factExtrasList"></div>
+      <div class="facture-divider"></div>
+      <div class="facture-row facture-row-total">
+        <span class="facture-label">Premier ménage <em id="factFirstType">(base)</em></span>
+        <span class="facture-dots"></span>
+        <span class="facture-val" id="factFirst">140 $</span>
+      </div>
+      <div class="facture-row facture-row-total facture-row-recurring" id="factRecurringRow" hidden>
+        <span class="facture-label">Ménages suivants</span>
+        <span class="facture-dots"></span>
+        <span class="facture-val facture-val-teal" id="factRecurring">&mdash;</span>
+      </div>
+      <p class="facture-footnote">Facture estimée, non contractuelle &mdash; le montant final est confirmé lors de l'appel de suivi.</p>
+    </div>
+
+    <div class="booking-layout reveal">
+      <form
+        name="reservation"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="bookingForm"
+        class="booking-form"
+      >
+        <input type="hidden" name="form-name" value="reservation" />
+        <p class="hp-field"><label>Ne pas remplir: <input name="bot-field" /></label></p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">Nom complet *</label>
+            <input type="text" id="fname" name="Nom complet" required placeholder="Prénom et nom">
+          </div>
+          <div class="field">
+            <label for="fphone">Téléphone *</label>
+            <input type="tel" id="fphone" name="Téléphone" required placeholder="438-000-0000">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="femail">Courriel</label>
+            <input type="email" id="femail" name="Courriel" placeholder="vous@courriel.com">
+          </div>
+          <div class="field">
+            <label for="fsecteur">Secteur *</label>
+            <select id="fsecteur" name="Secteur" required>
+              <option value="" disabled selected>Choisir&hellip;</option>
+              <option>Mirabel</option>
+              <option>Blainville</option>
+              <option>Saint-Eustache</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="ftype">Type de logement *</label>
+            <select id="ftype" name="Type de logement" required>
+              <option value="" disabled selected>Choisir&hellip;</option>
+              <option>Appartement / Condo</option>
+              <option>Maison</option>
+              <option>Duplex</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="frooms">Nombre de chambres</label>
+            <select id="frooms" name="Nombre de chambres">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fdate">Date souhaitée</label>
+            <input type="date" id="fdate" name="Date souhaitée">
+          </div>
+          <div class="field">
+            <label for="ftime">Moment préféré</label>
+            <select id="ftime" name="Moment préféré">
+              <option>Matin</option>
+              <option>Après-midi</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="ffreq">Fréquence</label>
+          <select id="ffreq" name="Fréquence">
+            <option>Ménage une fois</option>
+            <option>Aux 2 semaines</option>
+            <option>Hebdomadaire</option>
+            <option>Mensuel</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="fmsg">Commentaires</label>
+          <textarea id="fmsg" name="Commentaires" rows="3" placeholder="Détails supplémentaires, animaux, accès, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn">ENVOYER MA DEMANDE</button>
+        <p class="form-note">Réponse habituelle en moins de 24h. Premier ménage &mdash; -20% pour nouveaux clients.</p>
+      </form>
+
+      <div id="successMsg" class="success-msg" hidden>
+        <div class="success-icon">✓</div>
+        <h3>Demande envoyée!</h3>
+        <p>Merci! On vous contacte sous peu pour confirmer votre réservation.</p>
+        <a href="tel:4388827263" class="btn-primary success-call-btn">Ou appelez-nous : 438-882-7263</a>
+      </div>
+
+      <div class="booking-side">
+        <div class="side-card">
+          <h3>Préférez appeler ou texter?</h3>
+          <a href="tel:4388827263" class="contact-btn call"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" style="vertical-align:-3px;margin-right:5px;"><path d="M4 5c0-1 1-2 2-2h2l2 5-2 1.5c1 2.5 2.5 4 5 5L14.5 13l5 2v2c0 1-1 2-2 2C10 19 4 13 4 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>438-882-7263</a>
+          <a href="sms:4388827263" class="contact-btn text"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" style="vertical-align:-3px;margin-right:5px;"><path d="M4 5h16v10H8l-4 4V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Textez-nous</a>
+          <div class="contact-area">Mirabel · Saint-Janvier · Blainville · Sainte-Thérèse · Laurentides</div>
+        </div>
+        <div class="side-card offer-side">
+          <div class="b-pct" style="font-size:26px;">-20%</div>
+          <p>sur votre premier ménage &mdash; nouveaux clients seulement.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <p class="pricing-footnote">*Estimations indicatives &mdash; le prix final peut varier selon la taille et l'état du logement.</p>
   </div>
 </section>
 
@@ -565,177 +1219,132 @@ padding:26px; text-align:center; color:#9089a0;
   </div>
 </section>
 
-<section class="testimonials-section">
+<section class="about-section" id="apropos">
   <div class="wrap">
-    <div class="section-eyebrow reveal">Avis clients</div>
-    <h2 class="section-title reveal">Ce que nos clients en pensent</h2>
-    <p class="section-sub reveal">Les premiers avis arrivent bientôt &mdash; soyez parmi les premiers à réserver.</p>
-    <div class="testimonial-grid reveal">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>Votre avis pourrait être ici après votre premier ménage.</p>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="about-photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" width="48" height="48"><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="9.5" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span>Photo à venir</span>
+        </div>
       </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>Votre avis pourrait être ici après votre premier ménage.</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>Votre avis pourrait être ici après votre premier ménage.</p>
+      <div class="about-text reveal">
+        <div class="section-eyebrow">Qui sommes-nous</div>
+        <h2 class="section-title" style="text-align:left;">Un couple, une seule priorité : votre maison</h2>
+        <p class="about-p">Ménage à deux, c'est exactement ça &mdash; nous sommes un couple qui s'occupe personnellement de chaque ménage, partout dans les Laurentides : Mirabel, Saint-Janvier, Blainville, Sainte-Thérèse et les environs. Pas d'employés anonymes, pas de roulement de personnel : les mêmes deux personnes, à chaque visite, qui connaissent votre maison et vos préférences.</p>
+        <div class="about-badges">
+          <div class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Satisfaction garantie &mdash; pas satisfait, on revient gratuitement</span>
+          </div>
+          <div class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M3 12c2-4 5-7 9-7s7 3 9 7c-2 4-5 7-9 7s-7-3-9-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Produits professionnels, sécuritaires pour enfants et animaux</span>
+          </div>
+          <div class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Ponctuels, chaque fois &mdash; votre temps compte aussi</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="faq-section">
+  <div class="wrap">
+    <div class="section-eyebrow reveal">Questions fréquentes</div>
+    <h2 class="section-title reveal">Vous avez des questions?</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button type="button" class="faq-q">
+          <span>Dois-je être présent(e) pendant le ménage?</span>
+          <span class="faq-caret">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Non, pas nécessaire. Plusieurs clients nous laissent un accès (code, clé, ou porte déverrouillée) et vaquent à leurs occupations. On vous contacte dès que c'est terminé.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">
+          <span>Apportez-vous vos propres produits?</span>
+          <span class="faq-caret">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Oui, tout est inclus. Nous apportons nos produits professionnels, sécuritaires pour les enfants et les animaux. Si vous préférez qu'on utilise vos produits, dites-le-nous simplement.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">
+          <span>Avez-vous des animaux à la maison? Est-ce un problème?</span>
+          <span class="faq-caret">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Pas du tout &mdash; on adore les animaux. Dites-nous simplement s'il y a des consignes particulières (portes à garder fermées, etc.) dans le champ "commentaires" de votre réservation.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">
+          <span>Puis-je annuler ou reporter un ménage?</span>
+          <span class="faq-caret">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Oui, sans problème &mdash; contactez-nous par téléphone ou texto au moins 24h à l'avance pour reporter ou annuler, sans frais.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">
+          <span>Comment fonctionne le paiement?</span>
+          <span class="faq-caret">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Le paiement se fait directement avec nous à la fin du ménage. On confirme toujours le prix exact avec vous avant de commencer, aucune surprise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="offer-banner reveal">
   <div class="wrap">
     <div>
       <h2>-20% sur votre premier ménage</h2>
-      <p>Offert aux nouveaux clients &mdash; Mirabel, Blainville &amp; Saint-Eustache.</p>
+      <p>Offert aux nouveaux clients &mdash; partout dans les Laurentides : Mirabel, Saint-Janvier, Blainville, Sainte-Thérèse et les environs.</p>
     </div>
     <a href="#contact" class="btn-primary">J'EN PROFITE</a>
   </div>
 </section>
 
-<section class="contact-section" id="contact">
-  <div class="wrap">
-    <div class="section-eyebrow reveal">Réservation</div>
-    <h2 class="section-title reveal">Réservez votre ménage</h2>
-    <p class="section-sub reveal">Remplissez le formulaire et on vous contacte pour confirmer &mdash; ou appelez-nous directement.</p>
-
-```
-<div class="booking-layout reveal">
-  <form
-    name="reservation"
-    method="POST"
-    data-netlify="true"
-    netlify-honeypot="bot-field"
-    id="bookingForm"
-    class="booking-form"
-  >
-    <input type="hidden" name="form-name" value="reservation" />
-    <p class="hp-field"><label>Ne pas remplir: <input name="bot-field" /></label></p>
-
-    <div class="field-row">
-      <div class="field">
-        <label for="fname">Nom complet *</label>
-        <input type="text" id="fname" name="Nom complet" required placeholder="Prénom et nom">
-      </div>
-      <div class="field">
-        <label for="fphone">Téléphone *</label>
-        <input type="tel" id="fphone" name="Téléphone" required placeholder="438-000-0000">
-      </div>
-    </div>
-
-    <div class="field-row">
-      <div class="field">
-        <label for="femail">Courriel</label>
-        <input type="email" id="femail" name="Courriel" placeholder="vous@courriel.com">
-      </div>
-      <div class="field">
-        <label for="fsecteur">Secteur *</label>
-        <select id="fsecteur" name="Secteur" required>
-          <option value="" disabled selected>Choisir&hellip;</option>
-          <option>Mirabel</option>
-          <option>Blainville</option>
-          <option>Saint-Eustache</option>
-          <option>Autre</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="field-row">
-      <div class="field">
-        <label for="ftype">Type de logement *</label>
-        <select id="ftype" name="Type de logement" required>
-          <option value="" disabled selected>Choisir&hellip;</option>
-          <option>Appartement / Condo</option>
-          <option>Maison</option>
-          <option>Duplex</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="frooms">Nombre de chambres</label>
-        <select id="frooms" name="Nombre de chambres">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5+</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="field-row">
-      <div class="field">
-        <label for="fdate">Date souhaitée</label>
-        <input type="date" id="fdate" name="Date souhaitée">
-      </div>
-      <div class="field">
-        <label for="ftime">Moment préféré</label>
-        <select id="ftime" name="Moment préféré">
-          <option>Matin</option>
-          <option>Après-midi</option>
-          <option>Flexible</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="ffreq">Fréquence</label>
-      <select id="ffreq" name="Fréquence">
-        <option>Ménage une fois</option>
-        <option>Aux 2 semaines</option>
-        <option>Hebdomadaire</option>
-        <option>Mensuel</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label for="fmsg">Commentaires</label>
-      <textarea id="fmsg" name="Commentaires" rows="3" placeholder="Détails supplémentaires, animaux, accès, etc."></textarea>
-    </div>
-
-    <button type="submit" class="btn-primary submit-btn">ENVOYER MA DEMANDE</button>
-    <p class="form-note">Réponse habituelle en moins de 24h. Premier ménage &mdash; -20% de rabais automatiquement appliqué.</p>
-  </form>
-
-  <div id="successMsg" class="success-msg" hidden>
-    <div class="success-icon">✓</div>
-    <h3>Demande envoyée!</h3>
-    <p>Merci! On vous contacte sous peu pour confirmer votre réservation.</p>
-    <a href="tel:4388827263" class="btn-primary success-call-btn">Ou appelez-nous : 438-882-7263</a>
-  </div>
-
-  <div class="booking-side">
-    <div class="side-card">
-      <h3>Préférez appeler ou texter?</h3>
-      <a href="tel:4388827263" class="contact-btn call">📞 438-882-7263</a>
-      <a href="sms:4388827263" class="contact-btn text">💬 Textez-nous</a>
-      <div class="contact-area">Mirabel · Blainville · Saint-Eustache</div>
-    </div>
-    <div class="side-card offer-side">
-      <div class="b-pct" style="font-size:26px;">-20%</div>
-      <p>sur votre premier ménage &mdash; appliqué automatiquement à votre soumission.</p>
-    </div>
-  </div>
-</div>
-```
-
-  </div>
-</section>
 
 <footer>
   <div class="fbrand">Ménage à deux</div>
-  <p>&copy; 2026 Ménage à deux. Service de ménage résidentiel &mdash; Mirabel, QC.</p>
+  <p>&copy; 2026 Ménage à deux. Service de ménage résidentiel &mdash; Laurentides, QC.</p>
+  <p class="footer-referral">💜 Parrainez un(e) ami(e) &mdash; vous recevez tous les deux 15$ de rabais sur votre prochain ménage.</p>
 </footer>
+
+<div class="mobile-cta-bar">
+  <a href="tel:4388827263" class="mobile-cta-btn mobile-cta-call">
+    <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 5c0-1 1-2 2-2h2l2 5-2 1.5c1 2.5 2.5 4 5 5L14.5 13l5 2v2c0 1-1 2-2 2C10 19 4 13 4 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    Appeler
+  </a>
+  <a href="#contact" class="mobile-cta-btn mobile-cta-book">
+    <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 3h9l4 4v14H6V3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 15.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    Réserver
+  </a>
+</div>
 
 <script>
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('open');
+    });
+  });
 
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -787,6 +1396,297 @@ padding:26px; text-align:center; color:#9089a0;
       document.body.removeChild(temp);
     }
   });
+
+  (function estimatorInit() {
+    const PRICING = {
+      condo: {
+        base: { start: 90, includedBed: 1, includedBath: 1 },
+        deep: { start: 140, includedBed: 1, includedBath: 1 }
+      },
+      maison: {
+        base: { start: 135, includedBed: 2, includedBath: 1 },
+        deep: { start: 210, includedBed: 2, includedBath: 1 }
+      }
+    };
+    const PER_ROOM = 25;
+    const MIN_BED = { condo: 1, maison: 2 };
+    const MIN_BATH = 1;
+    const MAX_ROOMS = 8;
+
+    const FREQ_LABELS = {
+      weekly: 'entretien, hebdomadaire',
+      biweekly: 'entretien, aux 2 semaines',
+      monthly: 'entretien, mensuel',
+      onetime: 'entretien'
+    };
+
+    let state = {
+      dwelling: 'condo',
+      serviceType: 'base',
+      bedrooms: 1,
+      bathrooms: 1,
+      frequency: 'onetime',
+      discount: 0,
+      extras: new Set()
+    };
+
+    const dwellingToggle = document.getElementById('dwellingToggle');
+    const dwellingThumb = document.getElementById('dwellingThumb');
+    const serviceToggle = document.getElementById('serviceToggle');
+    const serviceThumb = document.getElementById('serviceThumb');
+    const freqToggle = document.getElementById('freqToggle');
+    const extrasGrid = document.getElementById('extrasGrid');
+    const bedroomVal = document.getElementById('bedroomVal');
+    const bathroomVal = document.getElementById('bathroomVal');
+    const estFirst = document.getElementById('estFirst');
+    const estFirstStrike = document.getElementById('estFirstStrike');
+    const estFirstRealNote = document.getElementById('estFirstRealNote');
+    const estFirstTypeLabel = document.getElementById('estFirstTypeLabel');
+    const factFirstType = document.getElementById('factFirstType');
+    const estRecurring = document.getElementById('estRecurring');
+    const estStrike = document.getElementById('estStrike');
+    const recurringBlock = document.getElementById('recurringBlock');
+    const recurringLabel = document.getElementById('recurringLabel');
+
+    function slideThumb(toggleEl, thumbEl, activeBtn) {
+      if (!activeBtn) return;
+      const toggleRect = toggleEl.getBoundingClientRect();
+      const btnRect = activeBtn.getBoundingClientRect();
+      thumbEl.style.left = (btnRect.left - toggleRect.left) + 'px';
+      thumbEl.style.width = btnRect.width + 'px';
+    }
+
+    const factType = document.getElementById('factType');
+    const factFreq = document.getElementById('factFreq');
+    const factExtrasList = document.getElementById('factExtrasList');
+    const factFirst = document.getElementById('factFirst');
+    const factRecurringRow = document.getElementById('factRecurringRow');
+    const factRecurring = document.getElementById('factRecurring');
+
+    function setToggle(container, selector, value, attr) {
+      container.querySelectorAll(selector).forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.value === value);
+      });
+    }
+
+    function clamp(val, min, max) {
+      return Math.max(min, Math.min(max, val));
+    }
+
+    function bump(el) {
+      el.classList.remove('bump');
+      void el.offsetWidth;
+      el.classList.add('bump');
+    }
+
+    function extrasTotal() {
+      let total = 0;
+      extrasGrid.querySelectorAll('.est-extra-chip.selected').forEach(chip => {
+        total += parseInt(chip.dataset.price, 10);
+      });
+      return total;
+    }
+
+    function fakeOriginal(realPrice) {
+      return Math.round((realPrice * 1.2) / 5) * 5;
+    }
+
+    function recalc() {
+      const minBed = MIN_BED[state.dwelling];
+      state.bedrooms = clamp(state.bedrooms, minBed, MAX_ROOMS);
+      state.bathrooms = clamp(state.bathrooms, MIN_BATH, MAX_ROOMS);
+      bedroomVal.textContent = state.bedrooms;
+      bathroomVal.textContent = state.bathrooms;
+
+      const deepCfg = PRICING[state.dwelling].deep;
+      const baseCfg = PRICING[state.dwelling].base;
+      const firstCfg = PRICING[state.dwelling][state.serviceType];
+      const extraBed = Math.max(0, state.bedrooms - firstCfg.includedBed);
+      const extraBath = Math.max(0, state.bathrooms - firstCfg.includedBath);
+      const roomExtra = (extraBed + extraBath) * PER_ROOM;
+      const addOnsForFirst = extrasTotal();
+      const addOnsForRecurring = extrasTotal();
+
+      const fullFirstComponent = firstCfg.start / 0.8;
+
+      const fullBaseComponent = baseCfg.start / 0.8;
+      const basePriceFull = Math.round(fullBaseComponent) + roomExtra + addOnsForRecurring;
+
+      const typeLabel = state.serviceType === 'deep' ? '(nettoyage en profondeur)' : '(nettoyage de base)';
+      estFirstTypeLabel.textContent = typeLabel;
+      factFirstType.textContent = state.serviceType === 'deep' ? '(profondeur)' : '(base)';
+
+      let firstPrice;
+      if (state.frequency === 'weekly') {
+        const freqFirstComponent = Math.round(fullFirstComponent * 0.8);
+        firstPrice = freqFirstComponent + roomExtra + addOnsForFirst;
+        estFirstStrike.textContent = (Math.round(fullFirstComponent) + roomExtra + addOnsForFirst) + ' $';
+        estFirstRealNote.hidden = false;
+      } else {
+        firstPrice = firstCfg.start + roomExtra + addOnsForFirst;
+        estFirstStrike.textContent = fakeOriginal(firstPrice) + ' $';
+        estFirstRealNote.hidden = true;
+      }
+      estFirst.textContent = firstPrice + ' $';
+      bump(estFirst);
+
+      let recurringPrice = null;
+      if (state.frequency === 'onetime') {
+        recurringBlock.hidden = true;
+      } else {
+        const freqBaseComponent = Math.round(fullBaseComponent * (1 - state.discount / 100));
+        recurringPrice = freqBaseComponent + roomExtra + addOnsForRecurring;
+        recurringBlock.hidden = false;
+        recurringLabel.innerHTML = 'Ménages suivants <span>(' + FREQ_LABELS[state.frequency] + ', -' + state.discount + '%)</span>';
+        estStrike.textContent = basePriceFull + ' $';
+        estRecurring.textContent = recurringPrice + ' $';
+        bump(estRecurring);
+      }
+
+      updateFacture(firstPrice, recurringPrice);
+    }
+
+    function updateFacture(firstPrice, recurringPrice) {
+      factType.textContent = (state.dwelling === 'condo' ? 'Condo' : 'Maison') + ' \u2014 '
+        + state.bedrooms + ' ch. / ' + state.bathrooms + ' sdb.';
+
+      factFreq.textContent = state.frequency === 'onetime' ? 'Non choisie' : FREQ_TO_FORM[state.frequency];
+
+      factExtrasList.innerHTML = '';
+      extrasGrid.querySelectorAll('.est-extra-chip.selected').forEach(chip => {
+        const label = chip.dataset.label;
+        const price = chip.dataset.price;
+        const row = document.createElement('div');
+        row.className = 'facture-extra-row';
+        row.innerHTML = '<span class="facture-label">+ ' + label + '</span>'
+          + '<span class="facture-dots"></span>'
+          + '<span class="facture-val">' + price + ' $</span>';
+        factExtrasList.appendChild(row);
+      });
+
+      factFirst.textContent = firstPrice + ' $';
+
+      if (recurringPrice === null) {
+        factRecurringRow.hidden = true;
+      } else {
+        factRecurringRow.hidden = false;
+        factRecurring.textContent = recurringPrice + ' $';
+      }
+    }
+
+    dwellingToggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('.est-toggle-btn');
+      if (!btn) return;
+      state.dwelling = btn.dataset.value;
+      if (state.bedrooms < MIN_BED[state.dwelling]) state.bedrooms = MIN_BED[state.dwelling];
+      setToggle(dwellingToggle, '.est-toggle-btn', state.dwelling);
+      slideThumb(dwellingToggle, dwellingThumb, dwellingToggle.querySelector('.active'));
+      recalc();
+    });
+
+    serviceToggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('.est-toggle-btn');
+      if (!btn) return;
+      state.serviceType = btn.dataset.value;
+      setToggle(serviceToggle, '.est-toggle-btn', state.serviceType);
+      slideThumb(serviceToggle, serviceThumb, serviceToggle.querySelector('.active'));
+      recalc();
+    });
+
+    freqToggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('.est-freq-btn');
+      if (!btn) return;
+      state.frequency = btn.dataset.value;
+      state.discount = parseInt(btn.dataset.discount, 10);
+      freqToggle.querySelectorAll('.est-freq-btn').forEach(b => b.classList.toggle('active', b === btn));
+      recalc();
+    });
+
+    extrasGrid.addEventListener('click', (e) => {
+      const chip = e.target.closest('.est-extra-chip');
+      if (!chip) return;
+      chip.classList.toggle('selected');
+      recalc();
+    });
+
+    document.getElementById('bedroomMinus').addEventListener('click', () => {
+      state.bedrooms -= 1; recalc();
+    });
+    document.getElementById('bedroomPlus').addEventListener('click', () => {
+      state.bedrooms += 1; recalc();
+    });
+    document.getElementById('bathroomMinus').addEventListener('click', () => {
+      state.bathrooms -= 1; recalc();
+    });
+    document.getElementById('bathroomPlus').addEventListener('click', () => {
+      state.bathrooms += 1; recalc();
+    });
+
+    const estCta = document.getElementById('estCta');
+    const FREQ_TO_FORM = {
+      onetime: 'Ménage une fois',
+      weekly: 'Hebdomadaire',
+      biweekly: 'Aux 2 semaines',
+      monthly: 'Mensuel'
+    };
+    estCta.addEventListener('click', () => {
+      const ftype = document.getElementById('ftype');
+      const frooms = document.getElementById('frooms');
+      const ffreq = document.getElementById('ffreq');
+      const fmsg = document.getElementById('fmsg');
+
+      ftype.value = state.dwelling === 'condo' ? 'Appartement / Condo' : 'Maison';
+      frooms.value = state.bedrooms >= 5 ? '5+' : String(state.bedrooms);
+      ffreq.value = FREQ_TO_FORM[state.frequency];
+
+      const selectedExtras = Array.from(extrasGrid.querySelectorAll('.est-extra-chip.selected'))
+        .map(chip => chip.dataset.label);
+
+      const baseCfg = PRICING[state.dwelling].base;
+      const firstCfg = PRICING[state.dwelling][state.serviceType];
+      const extraBed = Math.max(0, state.bedrooms - firstCfg.includedBed);
+      const extraBath = Math.max(0, state.bathrooms - firstCfg.includedBath);
+      const roomExtra = (extraBed + extraBath) * PER_ROOM;
+      const addOnsForFirst = extrasTotal();
+      const addOnsForRecurring = extrasTotal();
+      const fullFirstComponent = firstCfg.start / 0.8;
+      const freqFirstComponent = Math.round(fullFirstComponent * 0.8);
+      const firstPrice = state.frequency === 'weekly'
+        ? freqFirstComponent + roomExtra + addOnsForFirst
+        : firstCfg.start + roomExtra + addOnsForFirst;
+      const typeText = state.serviceType === 'deep' ? 'profondeur' : 'base';
+
+      let summary = 'Estimation en ligne \u2014 ' + (state.dwelling === 'condo' ? 'Condo' : 'Maison')
+        + ', ' + state.bedrooms + ' ch. / ' + state.bathrooms + ' sdb.'
+        + ' Premier ménage (' + typeText + '): ' + firstPrice + ' $' + (state.frequency === 'weekly' ? ' (rabais réel 20% incl.)' : '') + '.';
+
+      if (state.frequency !== 'onetime') {
+        const fullBaseComponent = baseCfg.start / 0.8;
+        const freqBaseComponent = Math.round(fullBaseComponent * (1 - state.discount / 100));
+        const discounted = freqBaseComponent + roomExtra + addOnsForRecurring;
+        summary += ' Entretien ' + FREQ_TO_FORM[state.frequency].toLowerCase() + ': ' + discounted + ' $ (-' + state.discount + '%).';
+      }
+      if (selectedExtras.length) {
+        summary += ' Extras: ' + selectedExtras.join(', ') + '.';
+      }
+
+      fmsg.value = summary;
+
+      [ftype, frooms, ffreq, fmsg].forEach(el => {
+        el.classList.remove('field-flash');
+        void el.offsetWidth;
+        el.classList.add('field-flash');
+      });
+    });
+
+    recalc();
+    slideThumb(dwellingToggle, dwellingThumb, dwellingToggle.querySelector('.active'));
+    slideThumb(serviceToggle, serviceThumb, serviceToggle.querySelector('.active'));
+    window.addEventListener('resize', () => {
+      slideThumb(dwellingToggle, dwellingThumb, dwellingToggle.querySelector('.active'));
+      slideThumb(serviceToggle, serviceThumb, serviceToggle.querySelector('.active'));
+    });
+  })();
 
   function encodeForm(data) {
     return Object.keys(data)

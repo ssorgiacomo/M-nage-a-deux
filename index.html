@@ -270,7 +270,6 @@
     color:#fff; font-size:clamp(26px,3.4vw,34px); font-weight:700; line-height:1.15;
   }
   .offer-banner p{color:#FFE4DE; font-size:14.5px; margin-top:8px;}
-  .ob-strike{text-decoration:line-through; opacity:0.75;}
   .ob-final{font-weight:700; color:#fff;}
   .offer-banner .btn-primary{background:#fff; color:#FF6F61;}
 
@@ -524,19 +523,10 @@
     display:flex; align-items:center; gap:8px;
     font-size:10.5px; color:#9089a0; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:10px;
   }
-  .cf-discount-tag{
-    background:#FF6F61; color:#fff; font-size:10px; font-weight:700;
-    padding:2px 8px; border-radius:20px; text-transform:none; letter-spacing:0;
-  }
-  .cf-discount-tag-deep{background:#5B3E96;}
   .cf-price-rows{display:flex; flex-direction:column; gap:8px;}
   .cf-price-row{display:flex; align-items:baseline; gap:10px;}
   .cf-dwelling{
     font-size:12px; font-weight:600; color:#6b6480; width:50px; flex-shrink:0;
-  }
-  .cf-strike{
-    font-family:'Fredoka',sans-serif; font-weight:600; font-size:13px; color:#c9c3d8;
-    text-decoration:line-through;
   }
   .cf-amount{
     font-family:'Fredoka',sans-serif; font-weight:700; font-size:19px; color:#2A2150;
@@ -609,10 +599,6 @@
     transition:background .15s ease, border-color .15s ease, transform .1s ease;
   }
   .est-freq-btn .fb-name{font-family:'Poppins',sans-serif; font-weight:600; font-size:11.5px; color:#EDE6FA; text-align:center;}
-  .est-freq-btn .fb-badge{
-    background:#FF6F61; color:#fff; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:20px;
-  }
-  .est-freq-btn .fb-badge-neutral{background:rgba(255,255,255,0.25); color:#EDE6FA;}
   .est-freq-btn.active{background:rgba(79,209,197,0.18); border-color:#4FD1C5;}
   .est-freq-btn.active .fb-name{color:#fff;}
 
@@ -682,24 +668,12 @@
   .est-cta-wrap{margin-top:12px; display:flex; justify-content:center;}
   .est-result-label{font-size:11.5px; color:#EDE6FA; text-transform:uppercase; letter-spacing:0.04em;}
   .est-result-label span{text-transform:none; letter-spacing:0; font-size:11px; opacity:0.8;}
-  .est-first-tag{
-    background:#FF6F61; color:#fff; font-size:9.5px; font-weight:700;
-    padding:2px 7px; border-radius:20px; margin-left:4px; opacity:1 !important;
-  }
-  .est-first-real-note{
-    margin-top:6px; font-size:11.5px; font-weight:600; color:#4FD1C5;
-  }
   .est-result-amount{
     font-family:'Fredoka',sans-serif; font-weight:700; font-size:34px; color:#fff; margin-top:4px;
     transition:transform .25s ease;
   }
   .est-result-amount.bump{transform:scale(1.08);}
-  .est-result-amount-teal{color:#4FD1C5;}
   .est-result-amount-row{display:flex; align-items:baseline; gap:10px;}
-  .est-result-strike{
-    font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:#C9C0E8;
-    text-decoration:line-through; margin-top:4px;
-  }
   .est-note{margin-top:6px; font-size:11px; color:#C9C0E8; font-style:italic;}
 
   .est-section-divider{
@@ -939,16 +913,14 @@
             <li><span class="check">✓</span> Lits faits avec draps propres (fournis par le client)</li>
           </ul>
           <div class="clean-from">
-            <span class="cf-label">À partir de <span class="cf-discount-tag">-20%</span></span>
+            <span class="cf-label">À partir de</span>
             <div class="cf-price-rows">
               <div class="cf-price-row">
                 <span class="cf-dwelling">Condo</span>
-                <span class="cf-strike">110 $</span>
                 <span class="cf-amount">90 $</span>
               </div>
               <div class="cf-price-row">
                 <span class="cf-dwelling">Maison</span>
-                <span class="cf-strike">160 $</span>
                 <span class="cf-amount">135 $</span>
               </div>
             </div>
@@ -969,16 +941,14 @@
             <li><span class="check">✓</span> Derrière et sous les meubles</li>
           </ul>
           <div class="clean-from">
-            <span class="cf-label">À partir de <span class="cf-discount-tag cf-discount-tag-deep">-20%</span></span>
+            <span class="cf-label">À partir de</span>
             <div class="cf-price-rows">
               <div class="cf-price-row">
                 <span class="cf-dwelling">Condo</span>
-                <span class="cf-strike">170 $</span>
                 <span class="cf-amount">140 $</span>
               </div>
               <div class="cf-price-row">
                 <span class="cf-dwelling">Maison</span>
-                <span class="cf-strike">250 $</span>
                 <span class="cf-amount">210 $</span>
               </div>
             </div>
@@ -990,7 +960,7 @@
     <div class="first-visit-note reveal">
       <span class="fvn-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 3l1.8 5.6L19 10l-5.2 1.4L12 17l-1.8-5.6L5 10l5.2-1.4L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
       <div>
-        <strong>Choisissez base ou profondeur selon vos besoins</strong> &mdash; le nettoyage en profondeur couvre plus de détails (plinthes, luminaires, intérieur du four et du frigo, vitres, etc.). Réservez à la fréquence de votre choix pour un prix réduit.
+        <strong>Choisissez base ou profondeur selon vos besoins</strong> &mdash; le nettoyage en profondeur couvre plus de détails (plinthes, luminaires, intérieur du four et du frigo, vitres, etc.). Réservez à la fréquence de votre choix.
       </div>
     </div>
 
@@ -1042,17 +1012,14 @@
       <div class="est-control est-freq-control">
         <label>Fréquence</label>
         <div class="est-freq-row" id="freqToggle">
-          <button type="button" class="est-freq-btn" data-value="weekly" data-discount="20">
+          <button type="button" class="est-freq-btn" data-value="weekly">
             <span class="fb-name">Hebdomadaire</span>
-            <span class="fb-badge">-20%</span>
           </button>
-          <button type="button" class="est-freq-btn" data-value="biweekly" data-discount="15">
+          <button type="button" class="est-freq-btn" data-value="biweekly">
             <span class="fb-name">Aux 2 semaines</span>
-            <span class="fb-badge">-15%</span>
           </button>
-          <button type="button" class="est-freq-btn" data-value="monthly" data-discount="10">
+          <button type="button" class="est-freq-btn" data-value="monthly">
             <span class="fb-name">Mensuel</span>
-            <span class="fb-badge">-10%</span>
           </button>
         </div>
       </div>
@@ -1103,18 +1070,9 @@
       <div class="est-result">
         <div class="est-result-row">
           <div class="est-result-block">
-            <div class="est-result-label">Premier ménage <span id="estFirstTypeLabel">(nettoyage de base)</span> <span class="est-first-tag">-20%</span></div>
+            <div class="est-result-label">Prix <span id="estFirstTypeLabel">(nettoyage de base)</span></div>
             <div class="est-result-amount-row">
-              <div class="est-result-strike" id="estFirstStrike"></div>
-              <div class="est-result-amount" id="estFirst">140 $</div>
-            </div>
-            <div class="est-first-real-note" id="estFirstRealNote" hidden>✓ Rabais réel de 20% &mdash; merci de choisir l'entretien hebdomadaire!</div>
-          </div>
-          <div class="est-result-block" id="recurringBlock" hidden>
-            <div class="est-result-label" id="recurringLabel">Ménages suivants <span>(entretien)</span></div>
-            <div class="est-result-amount-row">
-              <div class="est-result-strike" id="estStrike"></div>
-              <div class="est-result-amount est-result-amount-teal" id="estRecurring"></div>
+              <div class="est-result-amount" id="estFirst">90 $</div>
             </div>
           </div>
         </div>
@@ -1148,14 +1106,9 @@
       <div class="facture-extras" id="factExtrasList"></div>
       <div class="facture-divider"></div>
       <div class="facture-row facture-row-total">
-        <span class="facture-label">Premier ménage <em id="factFirstType">(base)</em></span>
+        <span class="facture-label">Prix <em id="factFirstType">(base)</em></span>
         <span class="facture-dots"></span>
         <span class="facture-val" id="factFirst">140 $</span>
-      </div>
-      <div class="facture-row facture-row-total facture-row-recurring" id="factRecurringRow" hidden>
-        <span class="facture-label">Ménages suivants</span>
-        <span class="facture-dots"></span>
-        <span class="facture-val facture-val-teal" id="factRecurring">&mdash;</span>
       </div>
       <p class="facture-footnote">Facture estimée, non contractuelle &mdash; le montant final est confirmé lors de l'appel de suivi.</p>
     </div>
@@ -1409,7 +1362,6 @@
 <footer>
   <div class="fbrand">Ménage à deux</div>
   <p>&copy; 2026 Ménage à deux. Service de ménage résidentiel &mdash; Laurentides, QC.</p>
-  <p class="footer-referral">💜 Parrainez un(e) ami(e) &mdash; vous recevez tous les deux 15$ de rabais sur votre prochain ménage.</p>
 </footer>
 
 <div class="mobile-cta-bar">
@@ -1502,20 +1454,12 @@
     const MIN_BATH = 1;
     const MAX_ROOMS = 8;
 
-    const FREQ_LABELS = {
-      weekly: 'entretien, hebdomadaire',
-      biweekly: 'entretien, aux 2 semaines',
-      monthly: 'entretien, mensuel',
-      onetime: 'entretien'
-    };
-
     let state = {
       dwelling: 'condo',
       serviceType: 'base',
       bedrooms: 1,
       bathrooms: 1,
       frequency: 'onetime',
-      discount: 0,
       extras: new Set()
     };
 
@@ -1528,16 +1472,10 @@
     const bedroomVal = document.getElementById('bedroomVal');
     const bathroomVal = document.getElementById('bathroomVal');
     const estFirst = document.getElementById('estFirst');
-    const estFirstStrike = document.getElementById('estFirstStrike');
-    const estFirstRealNote = document.getElementById('estFirstRealNote');
     const estFirstTypeLabel = document.getElementById('estFirstTypeLabel');
     const factFirstType = document.getElementById('factFirstType');
     const valueBanner = document.getElementById('valueBanner');
     const valueBannerAmount = document.getElementById('valueBannerAmount');
-    const estRecurring = document.getElementById('estRecurring');
-    const estStrike = document.getElementById('estStrike');
-    const recurringBlock = document.getElementById('recurringBlock');
-    const recurringLabel = document.getElementById('recurringLabel');
 
     function slideThumb(toggleEl, thumbEl, activeBtn) {
       if (!activeBtn) return;
@@ -1551,8 +1489,6 @@
     const factFreq = document.getElementById('factFreq');
     const factExtrasList = document.getElementById('factExtrasList');
     const factFirst = document.getElementById('factFirst');
-    const factRecurringRow = document.getElementById('factRecurringRow');
-    const factRecurring = document.getElementById('factRecurring');
 
     function setToggle(container, selector, value, attr) {
       container.querySelectorAll(selector).forEach(btn => {
@@ -1587,10 +1523,6 @@
       return total;
     }
 
-    function fakeOriginal(realPrice) {
-      return Math.round((realPrice * 1.2) / 5) * 5;
-    }
-
     function recalc() {
       const minBed = MIN_BED[state.dwelling];
       state.bedrooms = clamp(state.bedrooms, minBed, MAX_ROOMS);
@@ -1603,11 +1535,7 @@
       const extraBed = Math.max(0, state.bedrooms - firstCfg.includedBed);
       const extraBath = Math.max(0, state.bathrooms - firstCfg.includedBath);
       const roomExtra = (extraBed + extraBath) * PER_ROOM;
-      const addOnsForFirst = extrasTotal(isDeep);
-      const addOnsForRecurring = extrasTotal(isDeep);
-
-      const fullFirstComponent = firstCfg.start / 0.8;
-      const basePriceFull = Math.round(fullFirstComponent) + roomExtra + addOnsForRecurring;
+      const addOns = extrasTotal(isDeep);
 
       const typeLabel = isDeep ? '(nettoyage en profondeur)' : '(nettoyage de base)';
       estFirstTypeLabel.textContent = typeLabel;
@@ -1620,37 +1548,14 @@
         valueBanner.hidden = true;
       }
 
-      let firstPrice;
-      if (state.frequency === 'weekly') {
-        const freqFirstComponent = Math.round(fullFirstComponent * 0.8);
-        firstPrice = freqFirstComponent + roomExtra + addOnsForFirst;
-        estFirstStrike.textContent = (Math.round(fullFirstComponent) + roomExtra + addOnsForFirst) + ' $';
-        estFirstRealNote.hidden = false;
-      } else {
-        firstPrice = firstCfg.start + roomExtra + addOnsForFirst;
-        estFirstStrike.textContent = fakeOriginal(firstPrice) + ' $';
-        estFirstRealNote.hidden = true;
-      }
-      estFirst.textContent = firstPrice + ' $';
+      const finalPrice = firstCfg.start + roomExtra + addOns;
+      estFirst.textContent = finalPrice + ' $';
       bump(estFirst);
 
-      let recurringPrice = null;
-      if (state.frequency === 'onetime') {
-        recurringBlock.hidden = true;
-      } else {
-        const freqBaseComponent = Math.round(fullFirstComponent * (1 - state.discount / 100));
-        recurringPrice = freqBaseComponent + roomExtra + addOnsForRecurring;
-        recurringBlock.hidden = false;
-        recurringLabel.innerHTML = 'Ménages suivants <span>(' + FREQ_LABELS[state.frequency] + ', -' + state.discount + '%)</span>';
-        estStrike.textContent = basePriceFull + ' $';
-        estRecurring.textContent = recurringPrice + ' $';
-        bump(estRecurring);
-      }
-
-      updateFacture(firstPrice, recurringPrice);
+      updateFacture(finalPrice);
     }
 
-    function updateFacture(firstPrice, recurringPrice) {
+    function updateFacture(finalPrice) {
       factType.textContent = (state.dwelling === 'condo' ? 'Condo' : 'Maison') + ' \u2014 '
         + state.bedrooms + ' ch. / ' + state.bathrooms + ' sdb.';
 
@@ -1669,14 +1574,7 @@
         factExtrasList.appendChild(row);
       });
 
-      factFirst.textContent = firstPrice + ' $';
-
-      if (recurringPrice === null) {
-        factRecurringRow.hidden = true;
-      } else {
-        factRecurringRow.hidden = false;
-        factRecurring.textContent = recurringPrice + ' $';
-      }
+      factFirst.textContent = finalPrice + ' $';
     }
 
     dwellingToggle.addEventListener('click', (e) => {
@@ -1712,7 +1610,6 @@
       const btn = e.target.closest('.est-freq-btn');
       if (!btn) return;
       state.frequency = btn.dataset.value;
-      state.discount = parseInt(btn.dataset.discount, 10);
       freqToggle.querySelectorAll('.est-freq-btn').forEach(b => b.classList.toggle('active', b === btn));
       recalc();
     });
@@ -1762,24 +1659,15 @@
       const extraBed = Math.max(0, state.bedrooms - firstCfg.includedBed);
       const extraBath = Math.max(0, state.bathrooms - firstCfg.includedBath);
       const roomExtra = (extraBed + extraBath) * PER_ROOM;
-      const addOnsForFirst = extrasTotal(isDeep);
-      const addOnsForRecurring = extrasTotal(isDeep);
-      const fullFirstComponent = firstCfg.start / 0.8;
-      const freqFirstComponent = Math.round(fullFirstComponent * 0.8);
-      const firstPrice = state.frequency === 'weekly'
-        ? freqFirstComponent + roomExtra + addOnsForFirst
-        : firstCfg.start + roomExtra + addOnsForFirst;
+      const addOns = extrasTotal(isDeep);
+      const finalPrice = firstCfg.start + roomExtra + addOns;
       const typeText = state.serviceType === 'deep' ? 'profondeur' : 'base';
 
       let summary = 'Estimation en ligne \u2014 ' + (state.dwelling === 'condo' ? 'Condo' : 'Maison')
         + ', ' + state.bedrooms + ' ch. / ' + state.bathrooms + ' sdb.'
-        + ' Premier ménage (' + typeText + '): ' + firstPrice + ' $' + (state.frequency === 'weekly' ? ' (rabais réel 20% incl.)' : '') + '.';
+        + ' Prix (' + typeText + '): ' + finalPrice + ' $.'
+        + (state.frequency !== 'onetime' ? ' Fréquence souhaitée: ' + FREQ_TO_FORM[state.frequency] + '.' : '');
 
-      if (state.frequency !== 'onetime') {
-        const freqBaseComponent = Math.round(fullFirstComponent * (1 - state.discount / 100));
-        const discounted = freqBaseComponent + roomExtra + addOnsForRecurring;
-        summary += ' Entretien ' + FREQ_TO_FORM[state.frequency].toLowerCase() + ': ' + discounted + ' $ (-' + state.discount + '%).';
-      }
       if (selectedExtras.length) {
         summary += ' Extras: ' + selectedExtras.join(', ') + '.';
       }

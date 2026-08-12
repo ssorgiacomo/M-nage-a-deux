@@ -629,12 +629,26 @@
   }
   .est-extra-chip.locked .ec-included-tag{display:inline-block;}
   .est-value-banner{
-    display:flex; align-items:center; gap:10px; margin-top:14px; padding:13px 16px;
-    background:rgba(79,209,197,0.15); border:1px solid rgba(79,209,197,0.4); border-radius:12px;
-    color:#EDE6FA; font-size:12.5px;
+    display:flex; align-items:center; gap:16px; margin-top:18px; padding:20px 24px;
+    background:#4FD1C5; border:none; border-radius:16px;
+    color:#0F3D38; font-size:15px; font-weight:600;
+    box-shadow:0 10px 26px rgba(79,209,197,0.35);
+    animation:valueBannerPop .4s ease;
   }
-  .est-value-banner svg{color:#4FD1C5; flex-shrink:0;}
-  .est-value-banner strong{color:#fff; font-family:'Fredoka',sans-serif;}
+  @keyframes valueBannerPop{
+    0%{transform:scale(0.94); opacity:0;}
+    100%{transform:scale(1); opacity:1;}
+  }
+  .est-value-banner .vb-icon{
+    flex-shrink:0; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.35);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .est-value-banner svg{color:#0F3D38;}
+  .est-value-banner strong{
+    display:block; font-family:'Fredoka',sans-serif; font-size:22px; font-weight:700; color:#0F3D38;
+    line-height:1.3;
+  }
+  .est-value-banner span{display:block; font-size:13px; font-weight:600; color:#0F3D38; opacity:0.85; margin-top:1px;}
   .est-extra-note-info{color:#B3ABD6; font-size:11px;}
   .est-extra-note{margin-top:12px; font-size:11.5px; color:#C9C0E8; font-style:italic;}
 
@@ -1032,8 +1046,11 @@
           </button>
         </div>
         <div class="est-value-banner" id="valueBanner" hidden>
-          <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg>
-          <span>Le nettoyage en profondeur inclut <strong id="valueBannerAmount">180 $</strong> d'extras, sans frais additionnel.</span>
+          <div class="vb-icon"><svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div>
+            <strong id="valueBannerAmount">180 $</strong>
+            <span>d'extras inclus gratuitement avec le nettoyage en profondeur</span>
+          </div>
         </div>
         <div class="est-extra-note"><svg viewBox="0 0 24 24" fill="none" width="14" height="14" style="vertical-align:-2px;margin-right:4px;"><path d="M12 4a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" stroke="currentColor" stroke-width="1.6"/><path d="M12 5.8v1.7M4 17l7.3-5.2a1.1 1.1 0 011.4 0L20 17M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Organisation de garde-robe/armoires &mdash; selon estimation, contactez-nous</div>
       </div>

@@ -568,7 +568,7 @@
     position:relative; z-index:1;
   }
   .est-toggle-btn.active{color:#2A2150;}
-  .est-toggle-btn:active, .est-freq-btn:active, .est-step-btn:active, .est-extra-chip:active{
+  .est-toggle-btn:active, .est-step-btn:active, .est-extra-chip:active{
     transform:scale(0.95);
   }
   .est-stepper{
@@ -588,19 +588,22 @@
   }
   .est-step-val.bump{transform:scale(1.3);}
 
-  .est-freq-control{margin-top:22px;}
-  .est-freq-row{
-    display:flex; justify-content:center; flex-wrap:wrap; gap:12px;
+  .est-recurring-offer{
+    margin-top:22px; padding:18px 20px; border-radius:16px;
+    display:flex; align-items:center; gap:15px;
+    background:rgba(79,209,197,0.16); border:1px solid rgba(79,209,197,0.5);
   }
-  .est-freq-btn{
-    flex:1 1 180px; max-width:220px;
-    background:rgba(255,255,255,0.1); border:2px solid transparent; border-radius:12px;
-    padding:12px 6px; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px;
-    transition:background .15s ease, border-color .15s ease, transform .1s ease;
+  .est-recurring-icon{
+    width:42px; height:42px; border-radius:50%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:#4FD1C5; color:#2A2150;
   }
-  .est-freq-btn .fb-name{font-family:'Poppins',sans-serif; font-weight:600; font-size:11.5px; color:#EDE6FA; text-align:center;}
-  .est-freq-btn.active{background:rgba(79,209,197,0.18); border-color:#4FD1C5;}
-  .est-freq-btn.active .fb-name{color:#fff;}
+  .est-recurring-copy strong{
+    display:block; font-family:'Fredoka',sans-serif; font-size:16px; color:#fff;
+  }
+  .est-recurring-copy span{
+    display:block; margin-top:3px; font-size:12.5px; line-height:1.5; color:#EDE6FA;
+  }
 
   .est-extras-control{margin-top:22px;}
   .est-extras-grid{
@@ -691,7 +694,7 @@
   }
   @media (max-width: 560px){
     .est-grid{grid-template-columns:1fr;}
-    .est-freq-btn{flex:1 1 45%;}
+    .est-recurring-offer{align-items:flex-start;}
     .est-extras-grid{grid-template-columns:1fr 1fr;}
     .est-result-row{flex-direction:column;}
   }
@@ -1009,18 +1012,13 @@
         </div>
       </div>
 
-      <div class="est-control est-freq-control">
-        <label>Fréquence</label>
-        <div class="est-freq-row" id="freqToggle">
-          <button type="button" class="est-freq-btn" data-value="weekly">
-            <span class="fb-name">Hebdomadaire</span>
-          </button>
-          <button type="button" class="est-freq-btn" data-value="biweekly">
-            <span class="fb-name">Aux 2 semaines</span>
-          </button>
-          <button type="button" class="est-freq-btn" data-value="monthly">
-            <span class="fb-name">Mensuel</span>
-          </button>
+      <div class="est-recurring-offer" role="note">
+        <div class="est-recurring-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M7 7h10M7 12h7M7 17h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 15v6M15 18h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="est-recurring-copy">
+          <strong>Rabais pour les visites récurrentes</strong>
+          <span>Des rabais sont offerts aux clients qui choisissent un ménage hebdomadaire, aux 2 semaines ou mensuel. Contactez-nous pour connaître le tarif applicable.</span>
         </div>
       </div>
 
@@ -1097,11 +1095,6 @@
         <span class="facture-label">Logement</span>
         <span class="facture-dots"></span>
         <span class="facture-val" id="factType">Condo &mdash; 1 ch. / 1 sdb.</span>
-      </div>
-      <div class="facture-row">
-        <span class="facture-label">Fréquence</span>
-        <span class="facture-dots"></span>
-        <span class="facture-val" id="factFreq">Non choisie</span>
       </div>
       <div class="facture-extras" id="factExtrasList"></div>
       <div class="facture-divider"></div>
@@ -1459,7 +1452,6 @@
       serviceType: 'base',
       bedrooms: 1,
       bathrooms: 1,
-      frequency: 'onetime',
       extras: new Set()
     };
 
@@ -1467,7 +1459,6 @@
     const dwellingThumb = document.getElementById('dwellingThumb');
     const serviceToggle = document.getElementById('serviceToggle');
     const serviceThumb = document.getElementById('serviceThumb');
-    const freqToggle = document.getElementById('freqToggle');
     const extrasGrid = document.getElementById('extrasGrid');
     const bedroomVal = document.getElementById('bedroomVal');
     const bathroomVal = document.getElementById('bathroomVal');
@@ -1486,7 +1477,6 @@
     }
 
     const factType = document.getElementById('factType');
-    const factFreq = document.getElementById('factFreq');
     const factExtrasList = document.getElementById('factExtrasList');
     const factFirst = document.getElementById('factFirst');
 
@@ -1559,8 +1549,6 @@
       factType.textContent = (state.dwelling === 'condo' ? 'Condo' : 'Maison') + ' \u2014 '
         + state.bedrooms + ' ch. / ' + state.bathrooms + ' sdb.';
 
-      factFreq.textContent = state.frequency === 'onetime' ? 'Non choisie' : FREQ_TO_FORM[state.frequency];
-
       factExtrasList.innerHTML = '';
       extrasGrid.querySelectorAll('.est-extra-chip.selected').forEach(chip => {
         const label = chip.dataset.label;
@@ -1606,14 +1594,6 @@
       recalc();
     });
 
-    freqToggle.addEventListener('click', (e) => {
-      const btn = e.target.closest('.est-freq-btn');
-      if (!btn) return;
-      state.frequency = btn.dataset.value;
-      freqToggle.querySelectorAll('.est-freq-btn').forEach(b => b.classList.toggle('active', b === btn));
-      recalc();
-    });
-
     extrasGrid.addEventListener('click', (e) => {
       const chip = e.target.closest('.est-extra-chip');
       if (!chip || chip.classList.contains('locked')) return;
@@ -1635,21 +1615,13 @@
     });
 
     const estCta = document.getElementById('estCta');
-    const FREQ_TO_FORM = {
-      onetime: 'Ménage une fois',
-      weekly: 'Hebdomadaire',
-      biweekly: 'Aux 2 semaines',
-      monthly: 'Mensuel'
-    };
     estCta.addEventListener('click', () => {
       const ftype = document.getElementById('ftype');
       const frooms = document.getElementById('frooms');
-      const ffreq = document.getElementById('ffreq');
       const fmsg = document.getElementById('fmsg');
 
       ftype.value = state.dwelling === 'condo' ? 'Appartement / Condo' : 'Maison';
       frooms.value = state.bedrooms >= 5 ? '5+' : String(state.bedrooms);
-      ffreq.value = FREQ_TO_FORM[state.frequency];
 
       const selectedExtras = Array.from(extrasGrid.querySelectorAll('.est-extra-chip.selected'))
         .map(chip => chip.dataset.label);
@@ -1665,8 +1637,7 @@
 
       let summary = 'Estimation en ligne \u2014 ' + (state.dwelling === 'condo' ? 'Condo' : 'Maison')
         + ', ' + state.bedrooms + ' ch. / ' + state.bathrooms + ' sdb.'
-        + ' Prix (' + typeText + '): ' + finalPrice + ' $.'
-        + (state.frequency !== 'onetime' ? ' Fréquence souhaitée: ' + FREQ_TO_FORM[state.frequency] + '.' : '');
+        + ' Prix (' + typeText + '): ' + finalPrice + ' $.';
 
       if (selectedExtras.length) {
         summary += ' Extras: ' + selectedExtras.join(', ') + '.';
@@ -1674,7 +1645,7 @@
 
       fmsg.value = summary;
 
-      [ftype, frooms, ffreq, fmsg].forEach(el => {
+      [ftype, frooms, fmsg].forEach(el => {
         el.classList.remove('field-flash');
         void el.offsetWidth;
         el.classList.add('field-flash');
